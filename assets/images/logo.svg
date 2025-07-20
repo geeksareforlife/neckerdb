@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="25.686535mm"
+   height="26.346788mm"
+   viewBox="0 0 25.686535 26.346788"
+   version="1.1"
+   id="svg5"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <style
+     type="text/css"
+     id="style2">
+     .logo-necker {stroke-width:0}
+     .logo-right {fill:#dc2626}
+     .logo-left {fill:#0284c7}
+   </style>
+  <g
+     id="layer1"
+     transform="translate(-67.326606,-42.326606)">
+    <path
+       id="rect1160"
+       class="logo-necker logo-right"
+       d="m 69.826606,42.98686 8.660254,5 -2.5,4.330127 -8.660254,-5 z" />
+    <path
+       id="rect1160-0"
+       class="logo-necker logo-right"
+       d="m 85.01314,58.683013 4.330127,2.5 1.830127,6.830127 -8.660254,-5 z" />
+    <path
+       id="rect1160-1"
+       class="logo-necker logo-left"
+       d="m 93.01314,44.826606 -5,8.660254 -4.330127,-2.5 5,-8.660254 z" />
+    <path
+       id="rect1160-6"
+       class="logo-necker logo-left"
+       d="m 83.316987,49.620835 -3.5,6.062178 -4.330127,-2.5 3.5,-6.062178 z" />
+    <path
+       id="rect1160-6-2"
+       class="logo-necker logo-right"
+       d="m 86.379165,58.316987 -6.062178,-3.5 2.5,-4.330127 6.062178,3.5 z" />
+    <path
+       id="rect1160-6-2-9"
+       class="logo-necker logo-right"
+       d="m 78.183013,60.51314 -6.062178,-3.5 2.5,-4.330127 6.062178,3.5 z" />
+    <path
+       id="rect1160-6-27"
+       class="logo-necker logo-left"
+       d="m 85.51314,57.816987 -3.5,6.062178 -4.330127,-2.5 3.5,-6.062178 z" />
+    <path
+       id="rect1160-1-9"
+       class="logo-necker logo-left"
+       d="m 77.316987,60.01314 -5,8.660254 -1.830127,-6.830127 2.5,-4.330127 z" />
+  </g>
+</svg>
