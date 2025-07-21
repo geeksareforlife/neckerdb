@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <article>
+    <h1 class="font-bold text-3xl mb-6">{{ .Title }}</h2>
+    <div class="flex flex-row mb-3">
+      <div class="basis-2/5">
+        <p class="mb-1"><span class="font-bold">Founded:</span> {{ .Params.Founded }}</p>
+        <p class="mb-1"><span class="font-bold">Location:</span> {{ .Params.Location }}</p>
+      </div>
+      <div class="basis-3/5 bg-gray-100 p-5 rounded-2xl">{{ partial "neckerTripleSVG.html" . }}</div>
+    </div>
+    <div class="prose">
+      {{ .Content }}
+    </div>
+  </article>
+  <!-- <div class="float-right w-3/5 bg-gray-100 p-5 rounded-2xl"> -->
+{{ end }}

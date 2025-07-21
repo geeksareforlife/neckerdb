@@ -27,3 +27,26 @@ disableKinds = ["taxonomy", "term"]
   [[build.cachebusters]]
     source = "assets/.*\\.(.*)$"
     target = "$1"
+
+[params]
+  [params.colours]
+    tsa-black = "#221f20"
+    tsa-bright-orange = "#f9a930"
+    tsa-brown = "#9b7747"
+    tsa-dark-red = "#94362a"
+    tsa-emerald = "#42ab66"
+    tsa-gold = "#ffdb7c"
+    tsa-green = "#188951"
+    tsa-grey = "#86858b"
+    tsa-khaki = "#d5ba8f"
+    tsa-lemon = "#fdfe63"
+    tsa-maroon = "#7c3f47"
+    tsa-navy-blue = "#0a1f62"
+    tsa-purple = "#9c164b"
+    tsa-royal-blue = "#0a3786"
+    tsa-scarlet = "#dc2c15"
+    tsa-scout-green = "#39774e"
+    tsa-scout-purple = "#55377d"
+    tsa-sky-blue = "#b2d0ea"
+    tsa-turquoise = "#02a2a8"
+    tsa-white = "#ffffff"
