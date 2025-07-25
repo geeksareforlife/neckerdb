@@ -1,5 +1,8 @@
 ---
 title: Derbyshire Scouts
+type: necker
+layout: section
+publishDate: 2025-07-25T12:00:00Z
 params:
   showNecker: triple
   rightOuterBorder: tsa-green

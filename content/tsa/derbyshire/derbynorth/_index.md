@@ -1,5 +1,8 @@
 ---
 title: Derby North Scouts District
+type: necker
+layout: section
+publishDate: 2025-07-25T13:00:00Z
 params:
   showNecker: triple
   rightOuterBorder: tsa-emerald

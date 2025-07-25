@@ -1,5 +1,8 @@
 ---
 title: 124th Derby (Mickleover)
+type: necker
+layout: section
+publishDate: 2025-07-25T14:00:00Z
 params:
   showNecker: triple
   rightOuterBorder: tsa-black

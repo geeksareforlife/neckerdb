@@ -1,5 +1,8 @@
 ---
 title: Jamboree 2024
+type: necker
+layout: page
+publishDate: 2025-07-25T19:00:00Z
 params:
   showNecker: triple
   rightOuterBorder: tsa-royal-blue

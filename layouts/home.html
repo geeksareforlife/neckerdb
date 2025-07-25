@@ -3,4 +3,17 @@
     <h1>{{ .Title }}</h2>
     {{ .Content }}
   </article>
+
+  <h2 class="font-bold text-2xl my-3">All Neckers</h2>
+  <table class="border border-collapse border-slate-300">
+  {{ range where .Site.AllPages.ByPublishDate "Type" "necker" }}
+    <tr>
+    <td class="border border-slate-300 p-2">{{ .Title }}</td>
+    <td class="border border-slate-300 p-2">{{ .Kind }}</td>
+    <td class="border border-slate-300 p-2">{{ .Section }}</td>
+    <td class="border border-slate-300 p-2">{{ .Type }}</td>
+    <td class="border border-slate-300 p-2">{{ .Layout }}</td>
+    </tr>
+  {{ end }}
+</table>
 {{ end }}
