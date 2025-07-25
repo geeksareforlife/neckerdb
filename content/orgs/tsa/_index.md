@@ -2,7 +2,7 @@
 title: The Scout Association (UK)
 layout: page
 params:
-  showNecker: True
+  showNecker: triple
   rightOuterBorder: tsa-royal-blue
   leftOuterBorder: tsa-royal-blue
   rightMiddleBorder: tsa-scarlet
@@ -14,5 +14,3 @@ params:
   location: Gilwell Park, Chingford
   founded: 1910
 ---
-
-sfsfsfsdfsfsd

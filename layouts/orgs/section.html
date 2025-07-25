@@ -6,7 +6,15 @@
         <p class="mb-1"><span class="font-bold">Founded:</span> {{ .Params.Founded }}</p>
         <p class="mb-1"><span class="font-bold">Location:</span> {{ .Params.Location }}</p>
       </div>
-      <div class="basis-3/5 bg-gray-100 p-5 rounded-2xl">{{ partial "neckerTripleSVG.html" . }}</div>
+      <div class="basis-3/5 bg-gray-100 p-5 rounded-2xl">
+        {{- if eq .Params.showNecker "triple" -}}
+          {{- partial "neckerTripleSVG.html" . -}}
+        {{- else if eq .Params.showNecker "central" -}}
+
+        {{- else -}}
+          Necker missing
+        {{- end -}}
+      </div>
     </div>
     <div class="prose">
       {{ .Content }}

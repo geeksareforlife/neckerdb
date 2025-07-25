@@ -1,7 +1,7 @@
 ---
 title: 1st Gilwell Park
 params:
-  showNecker: True
+  showNecker: triple
   rightOuterBorder: tsa-khaki
   leftOuterBorder: tsa-khaki
   rightMiddleBorder: tsa-khaki
