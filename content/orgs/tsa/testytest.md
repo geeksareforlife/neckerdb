@@ -1,5 +1,5 @@
 ---
-title: The Scout Association (UK)
+title: Jamboree 2024
 params:
   showNecker: triple
   rightOuterBorder: tsa-royal-blue
@@ -10,6 +10,6 @@ params:
   leftInnerBorder: tsa-white
   rightMain: tsa-royal-blue
   leftMain: tsa-royal-blue
-  location: Gilwell Park, Chingford
-  founded: 1910
+  location: South Korea
+  founded: n/a
 ---

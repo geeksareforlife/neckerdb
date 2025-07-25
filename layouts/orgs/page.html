@@ -1,7 +1,24 @@
 {{ define "main" }}
   <article>
-    <h1 class="font-bold text-3xl mb-3">{{ .Title }}</h2>
-    {{ partial "neckerTripleSVG.html" . }}
-    {{ .Content }}
+    <h1 class="font-bold text-3xl mb-6">{{ .Title }}</h2>
+    <div class="flex flex-row mb-3">
+      <div class="basis-2/5">
+        <p class="mb-1"><span class="font-bold">Founded:</span> {{ .Params.Founded }}</p>
+        <p class="mb-1"><span class="font-bold">Location:</span> {{ .Params.Location }}</p>
+      </div>
+      <div class="basis-3/5 bg-gray-100 p-5 rounded-2xl">
+        {{- if eq .Params.showNecker "triple" -}}
+          {{- $prefix := replace .Path "/" "" -}}
+          {{- partial "neckerTripleSVG.html" $prefix -}}
+        {{- else if eq .Params.showNecker "central" -}}
+
+        {{- else -}}
+          Necker missing
+        {{- end -}}
+      </div>
+    </div>
+    <div class="prose">
+      {{ .Content }}
+    </div>
   </article>
 {{ end }}

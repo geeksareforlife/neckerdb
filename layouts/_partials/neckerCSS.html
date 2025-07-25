@@ -1,69 +1,70 @@
-    <style type="text/css">
-    	#necker {
-				width: 100%;
-			}
+<style type="text/css">
+{{- $prefix := replace .Path "/" "" -}}
+#necker {
+	width: 100%;
+}
 
-    	#right-outer-border path {
-				color: {{- if eq "#" (substr .Params.rightOuterBorder 0 1) -}}
-								{{- .Params.rightOuterBorder -}}
-							{{- else -}}
-								{{- index .Site.Params.colours .Params.rightOuterBorder -}}
-							{{- end -}};
-			}
+#{{- $prefix -}}-right-outer-border path {
+	color: {{- if eq "#" (substr .Params.rightOuterBorder 0 1) -}}
+					{{- .Params.rightOuterBorder -}}
+				{{- else -}}
+					{{- index .Site.Params.colours .Params.rightOuterBorder -}}
+				{{- end -}};
+}
 
-			#left-outer-border path {
-				color: {{- if eq "#" (substr .Params.leftOuterBorder 0 1) -}}
-								{{- .Params.leftOuterBorder -}}
-							{{- else -}}
-								{{- index .Site.Params.colours .Params.leftOuterBorder -}}
-							{{- end -}};
-			}
+#{{- $prefix -}}-left-outer-border path {
+	color: {{- if eq "#" (substr .Params.leftOuterBorder 0 1) -}}
+					{{- .Params.leftOuterBorder -}}
+				{{- else -}}
+					{{- index .Site.Params.colours .Params.leftOuterBorder -}}
+				{{- end -}};
+}
 
-			#right-middle-border path {
-				color: {{- if eq "#" (substr .Params.rightMiddleBorder 0 1) -}}
-								{{- .Params.rightMiddleBorder -}}
-							{{- else -}}
-								{{- index .Site.Params.colours .Params.rightMiddleBorder -}}
-							{{- end -}};
-			}
+#{{- $prefix -}}-right-middle-border path {
+	color: {{- if eq "#" (substr .Params.rightMiddleBorder 0 1) -}}
+					{{- .Params.rightMiddleBorder -}}
+				{{- else -}}
+					{{- index .Site.Params.colours .Params.rightMiddleBorder -}}
+				{{- end -}};
+}
 
-			#left-middle-border path {
-				color: {{- if eq "#" (substr .Params.leftMiddleBorder 0 1) -}}
-								{{- .Params.leftMiddleBorder -}}
-							{{- else -}}
-								{{- index .Site.Params.colours .Params.leftMiddleBorder -}}
-							{{- end -}};
-			}
+#{{- $prefix -}}-left-middle-border path {
+	color: {{- if eq "#" (substr .Params.leftMiddleBorder 0 1) -}}
+					{{- .Params.leftMiddleBorder -}}
+				{{- else -}}
+					{{- index .Site.Params.colours .Params.leftMiddleBorder -}}
+				{{- end -}};
+}
 
-			#right-inner-border path {
-				color: {{- if eq "#" (substr .Params.rightInnerBorder 0 1) -}}
-								{{- .Params.rightInnerBorder -}}
-							{{- else -}}
-								{{- index .Site.Params.colours .Params.rightInnerBorder -}}
-							{{- end -}};
-			}
+#{{- $prefix -}}-right-inner-border path {
+	color: {{- if eq "#" (substr .Params.rightInnerBorder 0 1) -}}
+					{{- .Params.rightInnerBorder -}}
+				{{- else -}}
+					{{- index .Site.Params.colours .Params.rightInnerBorder -}}
+				{{- end -}};
+}
 
-			#left-inner-border path {
-				color: {{- if eq "#" (substr .Params.leftInnerBorder 0 1) -}}
-								{{- .Params.leftInnerBorder -}}
-							{{- else -}}
-								{{- index .Site.Params.colours .Params.leftInnerBorder -}}
-							{{- end -}};
-			}
+#{{- $prefix -}}-left-inner-border path {
+	color: {{- if eq "#" (substr .Params.leftInnerBorder 0 1) -}}
+					{{- .Params.leftInnerBorder -}}
+				{{- else -}}
+					{{- index .Site.Params.colours .Params.leftInnerBorder -}}
+				{{- end -}};
+}
 
-			#right-main path {
-				color: {{- if eq "#" (substr .Params.rightMain 0 1) -}}
-								{{- .Params.rightMain -}}
-							{{- else -}}
-								{{- index .Site.Params.colours .Params.rightMain -}}
-							{{- end -}};
-			}
+#{{- $prefix -}}-right-main path {
+	color: {{- if eq "#" (substr .Params.rightMain 0 1) -}}
+					{{- .Params.rightMain -}}
+				{{- else -}}
+					{{- index .Site.Params.colours .Params.rightMain -}}
+				{{- end -}};
+}
 
-			#left-main path {
-				color: {{- if eq "#" (substr .Params.leftMain 0 1) -}}
-								{{- .Params.leftMain -}}
-							{{- else -}}
-								{{- index .Site.Params.colours .Params.leftMain -}}
-							{{- end -}};
-			}
-    </style>
+#{{- $prefix -}}-left-main path {
+	color: {{- if eq "#" (substr .Params.leftMain 0 1) -}}
+					{{- .Params.leftMain -}}
+				{{- else -}}
+					{{- index .Site.Params.colours .Params.leftMain -}}
+				{{- end -}};
+}
+</style>
