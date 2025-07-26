@@ -9,8 +9,7 @@
       </div>
       <div class="basis-3/5 bg-gray-100 p-5 rounded-2xl">
         {{- if eq .Params.showNecker "triple" -}}
-          {{- $prefix := replace .Path "/" "" -}}
-          {{- partial "neckerTripleSVG.html" $prefix -}}
+          {{- partial "neckerTripleSVG.html" . -}}
         {{- else if eq .Params.showNecker "central" -}}
 
         {{- else -}}
@@ -31,12 +30,11 @@
       <a class="flex flex-col bg-gray-100 p-5 rounded-2xl hover:bg-gray-200" href="{{ .RelPermalink }}">
         <div class="mb-3">
         {{- if eq .Params.showNecker "triple" -}}
-          {{- $prefix := replace .Path "/" "" -}}
-          {{- partial "neckerTripleSVG.html" $prefix -}}
+          {{- partial "neckerTripleSVG.html" . -}}
         {{- end -}}
         </div>
         <div class="mb-auto text-center">{{ .Title }}</div>
-    </a>
+      </a>
     {{- end -}}
   </div>
   {{- end -}}
@@ -48,8 +46,7 @@
       <a class="flex flex-col bg-gray-100 p-5 rounded-2xl hover:bg-gray-200" href="{{ .RelPermalink }}">
         <div class="mb-3">
         {{- if eq .Params.showNecker "triple" -}}
-          {{- $prefix := replace .Path "/" "" -}}
-          {{- partial "neckerTripleSVG.html" $prefix -}}
+          {{- partial "neckerTripleSVG.html" . -}}
         {{- end -}}
         </div>
         <div class="mb-auto text-center">{{ .Title }}</div>

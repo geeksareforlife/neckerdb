@@ -17,26 +17,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    {{ if .Params.showNecker }}
-      {{- partial "neckerCSS.html" . -}}
-    {{ end }}
-
-    {{ if gt .RegularPages.Len 0 }}
-      {{- range .RegularPages -}}
-        {{ if .Params.showNecker }}
-          {{- partial "neckerCSS.html" . -}}
-        {{ end }}
-      {{ end }}
-    {{ end }}
-
-    {{ if gt .Sections.Len 0 }}
-      {{- range .Sections -}}
-        {{ if .Params.showNecker }}
-          {{- partial "neckerCSS.html" . -}}
-        {{ end }}
-      {{ end }}
-    {{ end }}
   </head>
   <body class="mb-10">
     {{ partial "topnav.html" . }}

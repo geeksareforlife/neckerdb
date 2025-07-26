@@ -1,3 +1,5 @@
+{{- partial "neckerCSS.html" . -}}
+{{- $prefix := replace .Path "/" "" -}}
 <svg
    viewBox="0 0 662.5993 194.49976"
    version="1.1"
@@ -12,7 +14,7 @@
    .st0{stroke-width:1;stroke-miterlimit:10;}
 </style>
   <g
-     id="{{- . -}}-right-outer-border"
+     id="{{- $prefix -}}-right-outer-border"
      fill="currentColor" stroke="currentColor"
      transform="translate(-89.700336,-363.8001)">
     <path
@@ -29,7 +31,7 @@
        id="path15" />
   </g>
   <g
-     id="{{- . -}}-left-outer-border"
+     id="{{- $prefix -}}-left-outer-border"
      fill="currentColor" stroke="currentColor"
      transform="translate(-89.700336,-363.8001)">
     <path
@@ -46,7 +48,7 @@
        id="path24" />
   </g>
   <g
-     id="{{- . -}}-right-middle-border"
+     id="{{- $prefix -}}-right-middle-border"
      fill="currentColor" stroke="currentColor"
      transform="translate(-89.700336,-363.8001)">
     <path
@@ -63,7 +65,7 @@
        id="path33" />
   </g>
   <g
-     id="{{- . -}}-left-middle-border"
+     id="{{- $prefix -}}-left-middle-border"
      fill="currentColor" stroke="currentColor"
      transform="translate(-89.700336,-363.8001)">
     <path
@@ -80,7 +82,7 @@
        id="path42" />
   </g>
   <g
-     id="{{- . -}}-right-inner-border"
+     id="{{- $prefix -}}-right-inner-border"
      fill="currentColor" stroke="currentColor"
      transform="translate(-89.700336,-363.8001)">
     <path
@@ -97,7 +99,7 @@
        id="path51" />
   </g>
   <g
-     id="{{- . -}}-left-inner-border"
+     id="{{- $prefix -}}-left-inner-border"
      fill="currentColor" stroke="currentColor"
      transform="translate(-89.700336,-363.8001)">
     <path
@@ -114,7 +116,7 @@
        id="path60" />
   </g>
   <g
-     id="{{- . -}}-right-main"
+     id="{{- $prefix -}}-right-main"
      fill="currentColor" stroke="currentColor"
      transform="translate(-89.700336,-363.8001)">
     <path
@@ -131,7 +133,7 @@
        id="path69" />
   </g>
   <g
-     id="{{- . -}}-left-main"
+     id="{{- $prefix -}}-left-main"
      fill="currentColor" stroke="currentColor"
      transform="translate(-89.700336,-363.8001)">
     <path

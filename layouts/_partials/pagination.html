@@ -1,0 +1,144 @@
+{{- $msg1 := "When passing a map to the internal pagination template, one of the elements must be named 'page', and it must be set to the context of the current page." }}
+
+{{- $page := . }}
+{{- $format := "default" }}
+
+{{- if reflect.IsMap . }}
+  {{- with .page }}
+    {{- $page = . }}
+  {{- else }}
+    {{- errorf $msg1 }}
+  {{- end }}
+{{- end }}
+
+{{- $itemClass := "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" }}
+{{- $currentItemClass := "border-indigo-500 text-indigo-600" }}
+
+{{- $totalPages := .Paginator.TotalNumberOfElements }}
+
+{{- /* Only do this if there are actually pages! */ -}}
+{{- if gt $page.Paginator.TotalPages 1 }}
+  <nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
+    {{- with .Paginator }}
+
+      {{- /* Work out the current page number and the start and end */ -}}
+      {{- $currentPageNumber := .PageNumber }}
+
+      {{- $start := sub $currentPageNumber 2 }}
+      {{- if lt $start 1 }}
+        {{- $start = 1 }}
+      {{- end }}
+
+      {{- $end := add $currentPageNumber 2 }}
+      {{- if gt $end $totalPages }}
+        {{- $end = $totalPages }}
+      {{- end }}
+
+      {{- /* Previous button */ -}}
+      {{- with .Prev }}
+        <div class="-mt-px flex w-0 flex-1">
+          <a href="{{ .URL }}" class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+            <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="mr-3 size-5 text-gray-400">
+              <path d="M18 10a.75.75 0 0 1-.75.75H4.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 18 10Z" clip-rule="evenodd" fill-rule="evenodd" />
+            </svg>
+            Previous
+          </a>
+        </div>
+      {{- else }}
+        {{- /* Hide button if no previous page */ -}}
+        <div class="-mt-px flex w-0 flex-1"></div>
+      {{- end }}
+
+      {{- /* Only show numbers at certain breakpoints */ -}}
+      <div class="hidden md:-mt-px md:flex">
+
+      {{- /* Do we need to add any numbers to the front? */ -}}
+      {{- if gt $start 1 }}
+        {{- with .First }}
+          {{- $class := "" }}
+          {{- if eq $.Paginator.PageNumber .PageNumber }}
+            {{- $class = $currentItemClass }}
+          {{- else }}
+            {{- $class = $itemClass }}
+          {{- end }}
+          <a href="{{ .URL }}" class="inline-flex items-center border-t-2 px-4 pt-4 text-sm font-medium {{ $class }}" aria-label="Page {{ .PageNumber }}" role="button">{{ .PageNumber }}</a>
+        {{- end }}
+      {{- end }}
+      {{- if eq $start 3 }}
+        {{- with index .Pagers 1 }}
+          {{- $class := "" }}
+          {{- if eq $.Paginator.PageNumber .PageNumber }}
+            {{- $class = $currentItemClass }}
+          {{- else }}
+            {{- $class = $itemClass }}
+          {{- end }}
+          <a href="{{ .URL }}" class="inline-flex items-center border-t-2 px-4 pt-4 text-sm font-medium {{ $class }}" aria-label="Page {{ .PageNumber }}" role="button">{{ .PageNumber }}</a>
+        {{- end }}
+      {{- end }}
+      {{- if gt $start 3 }}
+        <span class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500">...</span>
+      {{- end }}
+
+      {{- /* Show our range */ -}}
+      {{- range $k := seq $start $end }}
+        {{- with index $.Paginator.Pagers (sub $k 1) }}
+          {{- $class := "" }}
+          {{- if eq $.Paginator.PageNumber .PageNumber }}
+            {{- $class = $currentItemClass }}
+          {{- else }}
+            {{- $class = $itemClass }}
+          {{- end }}
+          <a href="{{ .URL }}" class="inline-flex items-center border-t-2 px-4 pt-4 text-sm font-medium {{ $class }}" aria-label="Page {{ .PageNumber }}" role="button">{{ .PageNumber }}</a>
+        {{- end }}
+      {{- end }}
+
+      {{- /* Do we need to add any pages on? */ -}}
+      {{- if eq $end $totalPages }}
+        {{- /* Do Nothing! */ -}}
+      {{- else if eq $end (sub $totalPages 2) }}
+        {{- with index .Pagers (sub $totalPages 2) }}
+          {{- $class := "" }}
+          {{- if eq $.Paginator.PageNumber .PageNumber }}
+            {{- $class = $currentItemClass }}
+          {{- else }}
+            {{- $class = $itemClass }}
+          {{- end }}
+          <a href="{{ .URL }}" class="inline-flex items-center border-t-2 px-4 pt-4 text-sm font-medium {{ $class }}" aria-label="Page {{ .PageNumber }}" role="button">{{ .PageNumber }}</a>
+        {{- end }}
+      {{- else if lt $end (sub $totalPages 2) }}
+        <span class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500">...</span>
+      {{- end }}
+
+      {{- if lt $end $totalPages }}
+        {{- with .Last }}
+          {{- $class := "" }}
+          {{- if eq $.Paginator.PageNumber .PageNumber }}
+            {{- $class = $currentItemClass }}
+          {{- else }}
+            {{- $class = $itemClass }}
+          {{- end }}
+          <a href="{{ .URL }}" class="inline-flex items-center border-t-2 px-4 pt-4 text-sm font-medium {{ $class }}" aria-label="Page {{ .PageNumber }}" role="button">{{ .PageNumber }}</a>
+        {{- end }}
+      {{- end }}
+
+      {{- /* END of numbers */ -}}
+      </div>
+
+      {{- /* Next button */ -}}
+      {{- with .Next }}
+        <div class="-mt-px flex w-0 flex-1 justify-end">
+          <a href="{{ .URL }}" class="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+            Next
+            <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="ml-3 size-5 text-gray-400">
+              <path d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" fill-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      {{- else }}
+        {{- /* Hide button if no next page */ -}}
+        <div class="-mt-px flex w-0 flex-1 justify-end"></div>
+      {{- end }}
+
+    {{- end }}
+  </nav>
+{{- end }}

@@ -8,8 +8,7 @@
       </div>
       <div class="basis-3/5 bg-gray-100 p-5 rounded-2xl">
         {{- if eq .Params.showNecker "triple" -}}
-          {{- $prefix := replace .Path "/" "" -}}
-          {{- partial "neckerTripleSVG.html" $prefix -}}
+          {{- partial "neckerTripleSVG.html" . -}}
         {{- else if eq .Params.showNecker "central" -}}
 
         {{- else -}}
