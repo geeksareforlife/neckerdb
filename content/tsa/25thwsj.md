@@ -1,5 +1,5 @@
 ---
-title: Jamboree 2024
+title: 25th World Scout Jamboree UK Contingent
 type: necker
 layout: page
 publishDate: 2025-07-25T19:00:00Z
@@ -13,6 +13,6 @@ params:
   leftInnerBorder: tsa-white
   rightMain: tsa-royal-blue
   leftMain: tsa-royal-blue
-  location: South Korea
-  founded: n/a
+  location: Buan-gun, South Korea
+  eventDate: 1-12 August 2023
 ---

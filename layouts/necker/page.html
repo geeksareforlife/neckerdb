@@ -3,8 +3,15 @@
     <h1 class="font-bold text-3xl mb-6">{{ .Title }}</h2>
     <div class="flex flex-row mb-3">
       <div class="basis-2/5">
+      {{- if .Params.Founded -}}
         <p class="mb-1"><span class="font-bold">Founded:</span> {{ .Params.Founded }}</p>
+      {{- end -}}
+      {{- if .Params.EventDate -}}
+        <p class="mb-1"><span class="font-bold">Event Date:</span> {{ .Params.EventDate }}</p>
+      {{- end -}}
+      {{- if .Params.Location -}} 
         <p class="mb-1"><span class="font-bold">Location:</span> {{ .Params.Location }}</p>
+      {{- end -}}
       </div>
       <div class="basis-3/5 bg-gray-100 p-5 rounded-2xl">
         {{- if eq .Params.showNecker "triple" -}}
