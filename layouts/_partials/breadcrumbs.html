@@ -1,0 +1,37 @@
+{{- if ne .Kind "home" -}}
+<nav aria-label="Breadcrumb" class="flex text-xs mb-4">
+  <ol role="list" class="flex items-center space-x-2">
+    {{- $length := .Ancestors.Len -}}
+    {{- range $index, $element := (.Ancestors.Reverse) -}}
+    {{- if eq $index (sub $length 1) -}}
+    <li class="lg:hidden" aria-hidden="true">
+      <i class="fa-light fa-ellipsis"></i>
+    </li>
+    <li>
+    {{- else -}}
+    <li class="hidden lg:block">
+    {{- end -}}
+      {{- if eq $index 0 -}}
+      <div>
+        <a href="{{ .RelPermalink }}" class="text-gray-800 hover:text-gray-500">
+          <i class="fa-light fa-house"></i>
+          <span class="sr-only">Home</span>
+        </a>
+      </div>
+      {{- else -}}
+      <div class="flex items-center">
+        <i class="fa-light fa-chevron-right"></i>
+        <a href="{{ .RelPermalink }}" class="ml-2 font-light text-gray-800 hover:text-gray-500">{{ .LinkTitle }}</a>
+      </div>
+      {{- end -}}
+    </li>
+    {{- end -}}
+    <li>
+      <div class="flex items-center">
+        <i class="fa-light fa-chevron-right"></i>
+        <a aria-current="page" href="{{ .RelPermalink }}" class="ml-2 font-light text-gray-800 hover:text-gray-500">{{ .LinkTitle }}</a>
+      </div>
+    </li>
+  </ol>
+</nav>
+{{- end -}}
