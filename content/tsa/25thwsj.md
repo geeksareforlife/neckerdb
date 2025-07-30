@@ -13,6 +13,10 @@ params:
   leftInnerBorder: tsa-white
   rightMain: tsa-royal-blue
   leftMain: tsa-royal-blue
+  showBadge: true
+  badgeFile: 25thwsj.png
+  badgeWidth: 6
+  badgeBottom: 35
   location: Buan-gun, South Korea
   eventDate: 1-12 August 2023
 ---

@@ -150,3 +150,8 @@
        id="path78" />
   </g>
 </svg>
+{{- if .Params.showBadge -}}
+  {{- with resources.Get (printf "images/neckerbadges/%s" .Params.badgeFile) -}}
+    <img src="{{ .RelPermalink }}" class="absolute bottom-[{{- $.Params.badgeBottom -}}%] w-[{{- $.Params.badgeWidth -}}%] left-1/2 transform -translate-x-1/2">
+  {{- end -}}
+{{- end -}}

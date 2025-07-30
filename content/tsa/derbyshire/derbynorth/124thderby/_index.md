@@ -1,7 +1,6 @@
 ---
 title: 124th Derby (Mickleover)
-type: necker
-layout: section
+type: necker/onecolour
 publishDate: 2025-07-25T14:00:00Z
 params:
   showNecker: triple
@@ -13,6 +12,10 @@ params:
   leftInnerBorder: tsa-black
   rightMain: tsa-black
   leftMain: tsa-black
+  showBadge: true
+  badgeFile: 124thderby.png
+  badgeWidth: 6
+  badgeBottom: 27
   location: Mickleover, Derby
   founded: 1946
 ---
