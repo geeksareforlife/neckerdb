@@ -4,6 +4,7 @@
 	width: 100%;
 }
 
+{{if .Params.rightOuterBorder -}}
 #{{- $prefix -}}-right-outer-border path {
 	color: {{- if eq "#" (substr .Params.rightOuterBorder 0 1) -}}
 					{{- .Params.rightOuterBorder -}}
@@ -11,7 +12,9 @@
 					{{- index .Site.Params.colours .Params.rightOuterBorder -}}
 				{{- end -}};
 }
+{{- end -}}
 
+{{if .Params.leftOuterBorder -}}
 #{{- $prefix -}}-left-outer-border path {
 	color: {{- if eq "#" (substr .Params.leftOuterBorder 0 1) -}}
 					{{- .Params.leftOuterBorder -}}
@@ -19,7 +22,9 @@
 					{{- index .Site.Params.colours .Params.leftOuterBorder -}}
 				{{- end -}};
 }
+{{- end -}}
 
+{{if .Params.rightMiddleBorder -}}
 #{{- $prefix -}}-right-middle-border path {
 	color: {{- if eq "#" (substr .Params.rightMiddleBorder 0 1) -}}
 					{{- .Params.rightMiddleBorder -}}
@@ -27,7 +32,9 @@
 					{{- index .Site.Params.colours .Params.rightMiddleBorder -}}
 				{{- end -}};
 }
+{{- end -}}
 
+{{if .Params.leftMiddleBorder -}}
 #{{- $prefix -}}-left-middle-border path {
 	color: {{- if eq "#" (substr .Params.leftMiddleBorder 0 1) -}}
 					{{- .Params.leftMiddleBorder -}}
@@ -35,7 +42,9 @@
 					{{- index .Site.Params.colours .Params.leftMiddleBorder -}}
 				{{- end -}};
 }
+{{- end -}}
 
+{{if .Params.rightInnerBorder -}}
 #{{- $prefix -}}-right-inner-border path {
 	color: {{- if eq "#" (substr .Params.rightInnerBorder 0 1) -}}
 					{{- .Params.rightInnerBorder -}}
@@ -43,7 +52,9 @@
 					{{- index .Site.Params.colours .Params.rightInnerBorder -}}
 				{{- end -}};
 }
+{{- end -}}
 
+{{if .Params.leftInnerBorder -}}
 #{{- $prefix -}}-left-inner-border path {
 	color: {{- if eq "#" (substr .Params.leftInnerBorder 0 1) -}}
 					{{- .Params.leftInnerBorder -}}
@@ -51,7 +62,29 @@
 					{{- index .Site.Params.colours .Params.leftInnerBorder -}}
 				{{- end -}};
 }
+{{- end -}}
 
+{{if .Params.centre -}}
+#{{- $prefix -}}-centre path {
+	color: {{- if eq "#" (substr .Params.centre 0 1) -}}
+					{{- .Params.centre -}}
+				{{- else -}}
+					{{- index .Site.Params.colours .Params.centre -}}
+				{{- end -}};
+}
+{{- end -}}
+
+{{if .Params.main -}}
+#{{- $prefix -}}-main path {
+	color: {{- if eq "#" (substr .Params.main 0 1) -}}
+					{{- .Params.main -}}
+				{{- else -}}
+					{{- index .Site.Params.colours .Params.main -}}
+				{{- end -}};
+}
+{{- end -}}
+
+{{if .Params.rightMain -}}
 #{{- $prefix -}}-right-main path {
 	color: {{- if eq "#" (substr .Params.rightMain 0 1) -}}
 					{{- .Params.rightMain -}}
@@ -59,7 +92,9 @@
 					{{- index .Site.Params.colours .Params.rightMain -}}
 				{{- end -}};
 }
+{{- end -}}
 
+{{if .Params.leftMain -}}
 #{{- $prefix -}}-left-main path {
 	color: {{- if eq "#" (substr .Params.leftMain 0 1) -}}
 					{{- .Params.leftMain -}}
@@ -67,4 +102,5 @@
 					{{- index .Site.Params.colours .Params.leftMain -}}
 				{{- end -}};
 }
+{{- end -}}
 </style>

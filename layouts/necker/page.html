@@ -1,6 +1,7 @@
 {{ define "main" }}
   <article>
     <h1 class="font-bold text-3xl mb-6">{{ .Title }}</h2>
+    {{ if .Params.showNecker }}
     <div class="flex flex-row mb-3">
       <div class="basis-2/5">
       {{- if .Params.Founded -}}
@@ -13,22 +14,11 @@
         <p class="mb-1"><span class="font-bold">Location:</span> {{ .Params.Location }}</p>
       {{- end -}}
       </div>
-      <div class="relative basis-3/5 bg-gray-100 p-5 rounded-2xl">
-        {{- if eq .Params.showNecker "triple" -}}
-          {{- partial "neckerTripleSVG.html" . -}}
-        {{- else if eq .Params.showNecker "central" -}}
-
-        {{- else -}}
-          Necker missing
-        {{- end -}}
-        {{- if .Params.showBadge -}}
-          {{- .Page.Resources.Get .Params.badgeFile -}}
-          {{- with .Resources.Get .Params.badgeFile -}}
-            <img src="{{ .RelPermalink }}" class="absolute bottom-[{{- $.Params.badgeBottom -}}%] w-[{{- $.Params.badgeWidth -}}%] left-1/2 transform -translate-x-1/2">
-          {{- end -}}
-        {{- end -}}
+      <div class="basis-3/5 bg-gray-100 p-5 rounded-2xl">
+        {{- partial "necker.html" . -}}
       </div>
     </div>
+    {{ end }}
     <div class="prose">
       {{ .Content }}
     </div>

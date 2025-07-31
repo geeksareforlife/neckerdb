@@ -1,0 +1,28 @@
+{{- partial "neckerCSS.html" . -}}
+{{- $prefix := replace .Path "/" "" -}}
+<div class="relative">
+   {{- if eq .Params.showNecker "triple" -}}
+      {{- partial "neckers/triple.html" . -}}
+   {{- else if eq .Params.showNecker "triple-split" -}}
+      {{- partial "neckers/tripleSplit.html" . -}}
+   {{- else if eq .Params.showNecker "double" -}}
+      {{- partial "neckers/double.html" . -}}
+   {{- else if eq .Params.showNecker "double-split" -}}
+      {{- partial "neckers/doubleSplit.html" . -}}
+   {{- else if eq .Params.showNecker "single" -}}
+      {{- partial "neckers/single.html" . -}}
+   {{- else if eq .Params.showNecker "single-split" -}}
+      {{- partial "neckers/singleSplit.html" . -}}
+   {{- else if eq .Params.showNecker "plain" -}}
+      {{- partial "neckers/plain.html" . -}}
+   {{- else if eq .Params.showNecker "plain-split" -}}
+      {{- partial "neckers/plainSplit.html" . -}}
+   {{- else if eq .Params.showNecker "centre-stripe" -}}
+      {{- partial "neckers/centreStripe.html" . -}}
+   {{- end -}}
+   {{- if .Params.showBadge -}}
+     {{- with resources.Get (printf "images/neckerbadges/%s" .Params.badgeFile) -}}
+       <img src="{{ .RelPermalink }}" class="absolute bottom-[{{- $.Params.badgeBottom -}}%] w-[{{- $.Params.badgeWidth -}}%] left-1/2 transform -translate-x-1/2">
+     {{- end -}}
+   {{- end -}}
+</div>

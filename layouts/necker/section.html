@@ -15,16 +15,10 @@
       {{- end -}}
       </div>
       <div class="basis-3/5 bg-gray-100 p-5 rounded-2xl">
-        {{- if eq .Params.showNecker "triple" -}}
-          {{- partial "neckerTripleSVG.html" . -}}
-        {{- else if eq .Params.showNecker "central" -}}
-
-        {{- else -}}
-          Necker missing
-        {{- end -}}
+        {{- partial "necker.html" . -}}
       </div>
     </div>
-    {{ end  }}
+    {{ end }}
     <div class="prose">
       {{ .Content }}
     </div>
@@ -36,9 +30,7 @@
     {{- range .RegularPages -}}
       <a class="flex flex-col bg-gray-100 p-5 rounded-2xl hover:bg-gray-200" href="{{ .RelPermalink }}">
         <div class="mb-3">
-        {{- if eq .Params.showNecker "triple" -}}
-          {{- partial "neckerTripleSVG.html" . -}}
-        {{- end -}}
+        {{- partial "necker.html" . -}}
         </div>
         <div class="mb-auto text-center">{{ .Title }}</div>
       </a>
@@ -52,9 +44,7 @@
     {{- range .Sections -}}
       <a class="flex flex-col bg-gray-100 p-5 rounded-2xl hover:bg-gray-200" href="{{ .RelPermalink }}">
         <div class="mb-3">
-        {{- if eq .Params.showNecker "triple" -}}
-          {{- partial "neckerTripleSVG.html" . -}}
-        {{- end -}}
+        {{- partial "necker.html" . -}}
         </div>
         <div class="mb-auto text-center">{{ .Title }}</div>
     </a>
