@@ -3,21 +3,26 @@
     <h1 class="font-bold text-3xl mb-6">{{ .Title }}</h2>
     {{ if .Params.showNecker }}
     <div class="flex flex-row mb-3">
-      <div class="basis-2/5">
-        <p class="mb-1"><span class="font-bold">Founded:</span> {{ .Params.Founded }}</p>
-        <p class="mb-1"><span class="font-bold">Location:</span> {{ .Params.Location }}</p>
+      <div class="basis-2/5 pr-5 flex flex-col justify-between gap-2">
+      {{- if .Params.Founded -}}
+        {{- $details := dict "Title" "Founded" "Data" .Params.Founded -}}
+        {{ partial "info-card.html" $details }}
+      {{- end -}}
+      {{- if .Params.EventDate -}}
+        {{- $details := dict "Title" "Event Date" "Data" .Params.EventDate -}}
+        {{ partial "info-card.html" $details }}
+      {{- end -}}
+      {{- if .Params.Location -}}
+        {{- $details := dict "Title" "Location" "Data" .Params.Location -}}
+        {{ partial "info-card.html" $details }}
+      {{- end -}}
       </div>
-      <div class="basis-3/5 bg-gray-100 p-5 rounded-2xl">
-        {{- if eq .Params.showNecker "triple" -}}
-          {{- partial "neckerTripleSVG.html" . -}}
-        {{- else if eq .Params.showNecker "central" -}}
-
-        {{- else -}}
-          Necker missing
-        {{- end -}}
+      {{- $background := "bg-white" -}}
+      <div class="basis-3/5 {{ .Params.Background | default $background }} p-5 overflow-hidden rounded-lg shadow">
+        {{- partial "necker.html" . -}}
       </div>
     </div>
-    {{ end  }}
+    {{ end }}
     <div class="prose">
       {{ .Content }}
     </div>
@@ -25,33 +30,12 @@
 
   {{ if gt .RegularPages.Len 0 }}
     <h2 class="font-bold text-2xl mb-3">Additional Neckers</h2>
-    <div class="grid gap-3 mb-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
-    {{- range .RegularPages -}}
-      <a class="flex flex-col bg-gray-100 p-5 rounded-2xl hover:bg-gray-200" href="{{ .RelPermalink }}">
-        <div class="mb-3">
-        {{- if eq .Params.showNecker "triple" -}}
-          {{- partial "neckerTripleSVG.html" . -}}
-        {{- end -}}
-        </div>
-        <div class="mb-auto text-center">{{ .Title }}</div>
-      </a>
-    {{- end -}}
-  </div>
+    {{ partial "neckerList.html" .RegularPages }}
   {{- end -}}
 
   {{ if gt .Sections.Len 0 }}
     <h2 class="font-bold text-2xl mb-3">Sub Organisations</h2>
-    <div class="grid gap-3 mb-6 rid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
-    {{- range .Sections -}}
-      <a class="flex flex-col bg-gray-100 p-5 rounded-2xl hover:bg-gray-200" href="{{ .RelPermalink }}">
-        <div class="mb-3">
-        {{- if eq .Params.showNecker "triple" -}}
-          {{- partial "neckerTripleSVG.html" . -}}
-        {{- end -}}
-        </div>
-        <div class="mb-auto text-center">{{ .Title }}</div>
-    </a>
-    {{- end -}}
+    {{ partial "neckerList.html" .Sections }}
   {{- end -}}
   </div>
 {{- end -}}

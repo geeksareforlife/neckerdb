@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="font-body">
+<html lang="en" class="font-body bg-gray-50">
   <head>
     <meta charset="utf-8" />
     <title>
@@ -17,12 +17,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6f1a8b22a0.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body class="mb-10">
-    {{ partial "topnav.html" . }}
-
-    <div class="container sm:px-4 lg:px-8">
-      {{ block "main" . }}{{ end }}
-    </div>
+    <header{{- if .IsHome }} class="absolute inset-x-0 top-0 z-50"{{- end -}}>
+      {{- partial "dev-size-indicator.html" . -}}
+      {{ partial "topnav.html" . }}
+    </header>
+    <main>
+      {{- if .IsHome -}}
+        {{ block "main" . }}{{ end }}
+      {{- else -}}
+        <div class="container px-4 lg:px-8">
+          {{ partial "breadcrumbs.html" . }}
+          {{ block "main" . }}{{ end }}
+        </div>
+      {{- end -}}
+    </main>
   </body>
 </html>

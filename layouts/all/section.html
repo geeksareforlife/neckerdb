@@ -1,0 +1,13 @@
+{{ define "main" }}
+	<article class="prose prose-sm 2xl:prose-base">
+    <h1>{{ .Title }}</h2>
+    {{ .Content }}
+	</article>
+  
+  {{ $pages := where .Site.AllPages "Type" "like" `necker.*` }}
+  {{ $paginator := .Paginate $pages.ByPublishDate 30 }}
+
+  {{ partial "neckerList.html" $paginator.Pages }}
+
+  {{ partial "pagination.html" . }}
+{{ end }}

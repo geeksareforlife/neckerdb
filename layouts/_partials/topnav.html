@@ -1,4 +1,9 @@
-    <nav class="bg-gray-800 mb-5">
+    <nav class="{{- if not .IsHome -}}bg-gray-800 {{ end -}}mb-3" x-data="{
+      open: false,
+      get isOpen() { return this.open },
+      get isClosed() { return ! this.open },
+      toggle() { this.open = ! this.open },
+    }">
       <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
           <div class="flex items-center px-2 lg:px-0">
@@ -8,7 +13,7 @@
             </div>
             <div class="hidden lg:ml-4 lg:block">
               <div class="flex space-x-4">
-                {{- $context := dict "path" .Path "location" "top" -}}
+                {{- $context := dict "page" . "location" "top" -}}
                 {{- partial "topnav-links.html" $context -}}
               </div>
             </div>
@@ -23,7 +28,7 @@
           </div>-->
           <div class="flex lg:hidden">
             <!-- Mobile menu button -->
-            <button type="button" aria-controls="mobile-menu" aria-expanded="false" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
+            <button type="button" @click="toggle()" aria-controls="mobile-menu" aria-expanded="false" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
               <span class="absolute -inset-0.5"></span>
               <span class="sr-only">Open main menu</span>
               <!--
@@ -31,26 +36,26 @@
 
                 Menu open: "hidden", Menu closed: "block"
               -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="block size-6">
-                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+              <span class="size-6" x-show="isClosed">
+                <i class="fa-light fa-bars"></i>
+              </span>
               <!--
                 Icon when menu is open.
 
                 Menu open: "block", Menu closed: "hidden"
               -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="hidden size-6">
-                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+              <span class="size-6" x-show="isOpen">
+                <i class="fa-light fa-xmark-large"></i>
+              </span>
             </button>
           </div>
         </div>
       </div>
 
       <!-- Mobile menu, show/hide based on menu state. -->
-      <div id="mobile-menu" class="lg:hidden">
+      <div id="mobile-menu" class="lg:hidden" x-show="open">
         <div class="space-y-1 px-2 pt-2 pb-3">
-          {{- $context := dict "path" .Path "location" "mobile" -}}
+          {{- $context := dict "page" . "location" "mobile" -}}
           {{- partial "topnav-links.html" $context -}}
         </div>
       </div>
