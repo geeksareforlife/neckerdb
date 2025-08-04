@@ -3,18 +3,22 @@
     <h1 class="font-bold text-3xl mb-6">{{ .Title }}</h2>
     {{ if .Params.showNecker }}
     <div class="flex flex-row mb-3">
-      <div class="basis-2/5">
+      <div class="basis-2/5 pr-5 flex flex-col justify-between gap-2">
       {{- if .Params.Founded -}}
-        <p class="mb-1"><span class="font-bold">Founded:</span> {{ .Params.Founded }}</p>
+        {{- $details := dict "Title" "Founded" "Data" .Params.Founded -}}
+        {{ partial "info-card.html" $details }}
       {{- end -}}
       {{- if .Params.EventDate -}}
-        <p class="mb-1"><span class="font-bold">Event Date:</span> {{ .Params.EventDate }}</p>
+        {{- $details := dict "Title" "Event Date" "Data" .Params.EventDate -}}
+        {{ partial "info-card.html" $details }}
       {{- end -}}
-      {{- if .Params.Location -}} 
-        <p class="mb-1"><span class="font-bold">Location:</span> {{ .Params.Location }}</p>
+      {{- if .Params.Location -}}
+        {{- $details := dict "Title" "Location" "Data" .Params.Location -}}
+        {{ partial "info-card.html" $details }}
       {{- end -}}
       </div>
-      <div class="basis-3/5 bg-gray-100 p-5 rounded-2xl">
+      {{- $background := "bg-white" -}}
+      <div class="basis-3/5 {{ .Params.Background | default $background }} p-5 overflow-hidden rounded-lg shadow">
         {{- partial "necker.html" . -}}
       </div>
     </div>

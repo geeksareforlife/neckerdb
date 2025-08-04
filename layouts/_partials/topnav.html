@@ -13,7 +13,7 @@
             </div>
             <div class="hidden lg:ml-4 lg:block">
               <div class="flex space-x-4">
-                {{- $context := dict "path" .Path "location" "top" -}}
+                {{- $context := dict "page" . "location" "top" -}}
                 {{- partial "topnav-links.html" $context -}}
               </div>
             </div>
@@ -55,7 +55,7 @@
       <!-- Mobile menu, show/hide based on menu state. -->
       <div id="mobile-menu" class="lg:hidden" x-show="open">
         <div class="space-y-1 px-2 pt-2 pb-3">
-          {{- $context := dict "path" .Path "location" "mobile" -}}
+          {{- $context := dict "page" . "location" "mobile" -}}
           {{- partial "topnav-links.html" $context -}}
         </div>
       </div>

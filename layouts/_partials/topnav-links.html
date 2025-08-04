@@ -3,12 +3,27 @@
 {{- if eq .location "mobile" -}}
   {{- $block = "block " -}}
 {{- end -}}
-{{- $selected := " bg-gray-900 text-white" -}}
-{{- $normal := " text-gray-300 hover:bg-gray-700 hover:text-white" -}}
-{{- $current := $normal -}}
-                {{- if eq .path "/" -}}{{- $current = $selected -}}{{- else -}}{{- $current = $normal -}}{{- end -}}
-                <a href="/" class="{{- $block -}}rounded-md px-3 py-2 text-sm font-medium {{- $current -}}">Home</a>
-                {{- if eq .path "/about" -}}{{- $current = $selected -}}{{- else -}}{{- $current = $normal -}}{{- end -}}
-                <a href="/about/" class="{{- $block -}}rounded-md px-3 py-2 text-sm font-medium {{- $current -}}">About</a>
-                {{- if eq .path "/submit" -}}{{- $current = $selected -}}{{- else -}}{{- $current = $normal -}}{{- end -}}
-                <a href="/submit/" class="{{- $block -}}rounded-md px-3 py-2 text-sm font-medium {{- $current -}}">Submit Necker</a>
+{{- $baseStyle := printf "%srounded-md px-3 py-2 text-sm font-medium" $block }}
+{{- $selected := printf "%s bg-gray-900 text-white" $baseStyle -}}
+{{- $normal := printf "%s text-gray-300 hover:bg-gray-700 hover:text-white" $baseStyle -}}
+
+
+{{- $page := .page }}
+
+{{- range site.Menus.top.ByWeight }}
+  {{- $attrs := dict "href" .URL }}
+  {{- if $page.IsMenuCurrent .Menu . }}
+    {{- $attrs = merge $attrs (dict "class" $selected "aria-current" "page") }}
+  {{- else if $page.HasMenuCurrent .Menu . }}
+    {{- $attrs = merge $attrs (dict "class" $selected "aria-current" "page") }}
+  {{- else }}
+    {{- $attrs = merge $attrs (dict "class" $normal) }}
+  {{- end }}
+  <a
+    {{- range $k, $v := $attrs }}
+      {{- with $v }}
+        {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+      {{- end }}
+    {{- end -}}
+  >{{ .Name }}</a>
+{{- end }}
