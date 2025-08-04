@@ -22,11 +22,19 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body class="mb-10">
-    {{- partial "dev-size-indicator.html" . -}}
-    {{ partial "topnav.html" . }}
-    <div class="container sm:px-4 lg:px-8">
-      {{ partial "breadcrumbs.html" . }}
-      {{ block "main" . }}{{ end }}
-    </div>
+    <header{{- if .IsHome }} class="absolute inset-x-0 top-0 z-50"{{- end -}}>
+      {{- partial "dev-size-indicator.html" . -}}
+      {{ partial "topnav.html" . }}
+    </header>
+    <main>
+      {{- if .IsHome -}}
+        {{ block "main" . }}{{ end }}
+      {{- else -}}
+        <div class="container px-4 lg:px-8">
+          {{ partial "breadcrumbs.html" . }}
+          {{ block "main" . }}{{ end }}
+        </div>
+      {{- end -}}
+    </main>
   </body>
 </html>
