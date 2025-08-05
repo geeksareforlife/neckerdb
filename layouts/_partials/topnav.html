@@ -4,12 +4,12 @@
       get isClosed() { return ! this.open },
       toggle() { this.open = ! this.open },
     }">
-      <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="relative flex h-36 lg:h-16 items-center justify-between">
           <div class="flex items-center px-2 lg:px-0">
             <div class="shrink-0">
               {{- $logo := resources.Get "images/logo.svg" -}}
-              <img src="{{ $logo.Permalink }}" alt="NeckerDB" class="h-8 w-auto" />
+              <img src="{{ $logo.Permalink }}" alt="NeckerDB" class="h-18 lg:h-8 w-auto" />
             </div>
             <div class="hidden lg:ml-4 lg:block">
               <div class="flex space-x-4">
@@ -28,7 +28,7 @@
           </div>-->
           <div class="flex lg:hidden">
             <!-- Mobile menu button -->
-            <button type="button" @click="toggle()" aria-controls="mobile-menu" aria-expanded="false" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
+            <button type="button" @click="toggle()" aria-controls="mobile-menu" aria-expanded="false" class="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
               <span class="absolute -inset-0.5"></span>
               <span class="sr-only">Open main menu</span>
               <!--
@@ -36,7 +36,7 @@
 
                 Menu open: "hidden", Menu closed: "block"
               -->
-              <span class="size-6" x-show="isClosed">
+              <span class="text-5xl" x-show="isClosed">
                 <i class="fa-light fa-bars"></i>
               </span>
               <!--
@@ -44,7 +44,7 @@
 
                 Menu open: "block", Menu closed: "hidden"
               -->
-              <span class="size-6" x-show="isOpen">
+              <span class="text-5xl" x-show="isOpen">
                 <i class="fa-light fa-xmark-large"></i>
               </span>
             </button>
@@ -53,7 +53,7 @@
       </div>
 
       <!-- Mobile menu, show/hide based on menu state. -->
-      <div id="mobile-menu" class="lg:hidden" x-show="open">
+      <div id="mobile-menu" class="lg:hidden bg-gray-800" x-show="open">
         <div class="space-y-1 px-2 pt-2 pb-3">
           {{- $context := dict "page" . "location" "mobile" -}}
           {{- partial "topnav-links.html" $context -}}

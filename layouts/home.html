@@ -1,15 +1,15 @@
 {{- define "main" -}}
-      <div class="relative isolate overflow-hidden pt-14">
+      <div class="relative isolate overflow-hidden pt-20 lg:pt-14">
         {{- $hero := resources.Get "images/colours.png" -}}
         <img src="{{ $hero.Permalink }}" alt="" class="absolute inset-0 -z-10 size-full object-cover" />
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl py-12 sm:py-24 lg:py-36">
             <div class="text-center">
-              <h1 class="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl">Discover the Colours of Scouting</h1>
-              <p class="mt-8 text-pretty text-lg font-medium text-gray-200 sm:text-xl/8">A growing collection of Scout & Guide neckers from across the UK and beyond. Browse. Celebrate. Contribute.</p>
-              <div class="mt-10 flex items-center justify-center gap-x-6">
-                <a href="/neckers/" class="rounded-md bg-fuchsia-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-fuchsia-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-500">Browse All</a>
-                <a href="/submit/" class="text-sm/6 font-semibold text-white">Submit Your Necker<span aria-hidden="true">→</span></a>
+              <h1 class="text-balance text-7xl lg:text-5xl font-semibold tracking-tight text-white">Discover the Colours of Scouting</h1>
+              <p class="mt-20 lg:mt-8 text-pretty text-2xl/10 lg:text-lg font-medium text-gray-200">A growing collection of Scout & Guide neckers from across the UK and beyond. Browse. Celebrate. Contribute.</p>
+              <div class="mt-20 lg:mt-10 mb-36 lg:mb-0 flex items-center justify-center gap-x-12 lg:gap-x-6">
+                <a href="/neckers/" class="rounded-md bg-fuchsia-500 px-3.5 py-2.5 text-2xl lg:text-sm font-semibold text-white shadow-sm hover:bg-fuchsia-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-500">Browse All</a>
+                <a href="/submit/" class="text-2xl lg:text-sm/6 font-semibold text-white">Submit Your Necker <span aria-hidden="true"><i class="fa-light fa-arrow-right"></i></span></a>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 {{- if ne .Kind "home" -}}
-<nav aria-label="Breadcrumb" class="flex text-xs mb-4">
+<nav aria-label="Breadcrumb" class="flex text-base lg:text-xs mb-4">
   <ol role="list" class="flex items-center space-x-2">
   {{- $length := .Ancestors.Len -}}
   {{- range $index, $element := (.Ancestors.Reverse) -}}
