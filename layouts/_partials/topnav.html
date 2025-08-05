@@ -5,11 +5,11 @@
       toggle() { this.open = ! this.open },
     }">
       <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <div class="relative flex h-24 lg:h-16 items-center justify-between">
+        <div class="relative flex h-36 lg:h-16 items-center justify-between">
           <div class="flex items-center px-2 lg:px-0">
             <div class="shrink-0">
               {{- $logo := resources.Get "images/logo.svg" -}}
-              <img src="{{ $logo.Permalink }}" alt="NeckerDB" class="h-12 lg:h-8 w-auto" />
+              <img src="{{ $logo.Permalink }}" alt="NeckerDB" class="h-18 lg:h-8 w-auto" />
             </div>
             <div class="hidden lg:ml-4 lg:block">
               <div class="flex space-x-4">
@@ -36,7 +36,7 @@
 
                 Menu open: "hidden", Menu closed: "block"
               -->
-              <span class="text-4xl" x-show="isClosed">
+              <span class="text-5xl" x-show="isClosed">
                 <i class="fa-light fa-bars"></i>
               </span>
               <!--
@@ -44,7 +44,7 @@
 
                 Menu open: "block", Menu closed: "hidden"
               -->
-              <span class="text-4xl" x-show="isOpen">
+              <span class="text-5xl" x-show="isOpen">
                 <i class="fa-light fa-xmark-large"></i>
               </span>
             </button>
