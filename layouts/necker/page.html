@@ -4,17 +4,10 @@
     {{ if .Params.showNecker }}
     <div class="flex flex-col lg:flex-row gap-5">
       <div class="lg:basis-2/5 order-2 lg:order-1 flex flex-row lg:flex-col lg:justify-between gap-2">
-      {{- if .Params.Founded -}}
-        {{- $details := dict "Title" "Founded" "Data" .Params.Founded -}}
-        {{ partial "info-card.html" $details }}
-      {{- end -}}
-      {{- if .Params.EventDate -}}
-        {{- $details := dict "Title" "Event Date" "Data" .Params.EventDate -}}
-        {{ partial "info-card.html" $details }}
-      {{- end -}}
-      {{- if .Params.Location -}}
-        {{- $details := dict "Title" "Location" "Data" .Params.Location -}}
-        {{ partial "info-card.html" $details }}
+      {{- if and .Params.info (gt (.Params.info | len) 0) -}}
+        {{- range $key, $details := (sort .Params.info "order" "asc")  -}}
+          {{ partial "info-card.html" $details }}
+        {{- end -}}
       {{- end -}}
       </div>
       {{- $background := "bg-white" -}}

@@ -8,6 +8,7 @@ params:
   rightOuterBorder: tsa-bright-orange
   leftOuterBorder: tsa-bright-orange
   main: tsa-royal-blue
-  location: Mickleover, Derby
-  founded: 1979
+  info:
+    - {type: location, data: Mickleover, Derby, order: 2}
+    - {type: founded, data: 1979, order: 1}
 ---

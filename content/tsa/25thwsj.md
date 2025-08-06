@@ -16,6 +16,7 @@ params:
   badgeFile: 25thwsj.png
   badgeWidth: 6
   badgeBottom: 35
-  location: Buan-gun, South Korea
-  eventDate: 1-12 August 2023
+  info:
+    - {type: location, data: Buan-gun, South Korea, order: 2}
+    - {type: eventdate, data: 1st - 12th August 2023, order: 1}
 ---

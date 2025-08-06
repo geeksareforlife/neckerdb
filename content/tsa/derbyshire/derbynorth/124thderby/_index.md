@@ -9,6 +9,7 @@ params:
   badgeFile: 124thderby.png
   badgeWidth: 8
   badgeBottom: 25
-  location: Mickleover, Derby
-  founded: 1946
+  info:
+    - {type: location, data: Mickleover, Derby, order: 2}
+    - {type: founded, data: 1946, order: 1}
 ---
