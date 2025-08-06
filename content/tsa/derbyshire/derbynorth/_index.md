@@ -10,6 +10,6 @@ params:
   rightInnerBorder: tsa-scarlet
   leftInnerBorder: tsa-scarlet
   main: tsa-turquoise
-  location: No HQ
-  founded: unknown
+  info:
+    - {type: location, data: No HQ, order: 2}
 ---

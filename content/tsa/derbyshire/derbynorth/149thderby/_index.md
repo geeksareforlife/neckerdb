@@ -13,6 +13,6 @@ params:
   leftInnerBorder: tsa-royal-blue
   rightMain: tsa-royal-blue
   leftMain: tsa-royal-blue
-  location: Mickleover, Derby
-  founded: unknown
+  info:
+    - {type: location, data: Mickleover, Derby, order: 2}
 ---

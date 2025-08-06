@@ -10,6 +10,6 @@ params:
   rightInnerBorder: tsa-white
   leftInnerBorder: tsa-white
   main: tsa-sky-blue
-  location: Little Eaton, Derbyshire
-  founded: unknown
+  info:
+    - {type: location, data: Little Eaton, Derbyshire, order: 2}
 ---

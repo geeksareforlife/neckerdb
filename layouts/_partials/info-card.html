@@ -1,6 +1,14 @@
+{{- $title := "" -}}
+{{- if eq .type "location" -}}
+  {{- $title = "Location" -}}
+{{- else if eq .type "founded" -}}
+  {{- $title = "Founded" -}}
+{{- else if eq .type "eventdate" -}}
+  {{- $title = "Event Date" -}}
+{{- end -}}
 <div class="overflow-hidden rounded-lg bg-white shadow">
   <div class="px-3 py-4 sm:p-5">
-    <div class="text-base lg:text-xs">{{ .Title }}</div>
-    <div class="text-2xl lg:text-lg font-bold">{{ .Data }}</div>
+    <div class="text-base lg:text-xs">{{ $title }}</div>
+    <div class="text-2xl lg:text-lg font-bold">{{ .data }}</div>
   </div>
 </div>

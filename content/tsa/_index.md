@@ -12,6 +12,7 @@ params:
   rightInnerBorder: tsa-white
   leftInnerBorder: tsa-white
   main: tsa-royal-blue
-  location: Gilwell Park, Chingford
-  founded: 1910
+  info:
+    - {type: location, data: Gilwell Park, Chingford, order: 2}
+    - {type: founded, data: 1910, order: 1}
 ---
