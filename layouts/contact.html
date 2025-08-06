@@ -1,0 +1,85 @@
+{{- define "main" -}}
+  <article>
+    <h1 class="font-bold text-4xl lg:text-3xl mb-6">Contact Us</h1>
+    <p class="mb-6">If you want to get in contact with us, use the form below</p>
+    <form 
+      name="contact" 
+      method="POST" 
+      data-netlify-recaptcha="true" 
+      data-netlify="true"
+      netlify-honeypot="hp1"
+    >
+      <div class="space-y-6">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-6 md:grid-cols-3">
+          <div>
+            <h2 class="text-base/7 font-semibold text-gray-900">Personal Information</h2>
+            <p class="mt-1 text-sm/6 text-gray-600">Tell us about yourself.</p>
+          </div>
+
+          <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-6 md:col-span-2">
+            <div class="sm:col-span-3">
+              <label for="first-name" class="block text-sm/6 font-medium text-gray-900">First name</label>
+              <div class="mt-2">
+                <input id="first-name" type="text" name="first-name" autocomplete="given-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+              </div>
+            </div>
+
+            <div class="sm:col-span-3">
+              <label for="last-name" class="block text-sm/6 font-medium text-gray-900">Last name</label>
+              <div class="mt-2">
+                <input id="last-name" type="text" name="last-name" autocomplete="family-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+              </div>
+            </div>
+
+            <div class="sm:col-span-6">
+              <label for="email" class="block text-sm/6 font-medium text-gray-900">Email address</label>
+              <div class="mt-2">
+                <input id="email" type="email" name="email" autocomplete="email" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 border-b border-gray-900/10 pb-6 md:grid-cols-3">
+          <div>
+            <h2 class="text-base/7 font-semibold text-gray-900">Your Message</h2>
+          </div>
+
+          <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-6 md:col-span-2">
+            <div class="col-span-full">
+              <label for="message" class="block text-sm/6 font-medium text-gray-900">Message</label>
+              <div class="mt-2">
+                <textarea id="message" name="message" rows="5" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 border-b border-gray-900/10 pb-6 md:grid-cols-3">
+          <div>
+            <h2 class="text-base/7 font-semibold text-gray-900">Confirmations</h2>
+          </div>
+
+          <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-6 md:col-span-2">
+            <div class="col-span-full">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-6 flex items-center justify-end gap-x-6">
+        <p class="hidden">
+          <label>
+            Don’t fill this out if you’re human: <input name="hp1" type="text" />
+          </label>
+        </p>
+        <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+      </div>
+    </form>
+  </article>
+{{- end -}}
