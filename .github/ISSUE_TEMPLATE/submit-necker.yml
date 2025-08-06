@@ -1,0 +1,68 @@
+name: New Necker
+description: Submit a necker we don't have!
+title: "[Necker]: "
+labels: ["necker"]
+assignees:
+  - geeksareforlife
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We're excited to learn about your necker! Please fill in as much detail as possible.
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details (optional)
+      description: How can we get in touch with you if we need more info? (this information is not required, and will be public)
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: input
+    id: organisation
+    attributes:
+      label: Group / Organisation
+      description: Which group or organisation does this necker belong to?
+    validations:
+      required: true
+  - type: input
+    id: heirarchy
+    attributes:
+      label: Heirarchy
+      description: How does this organisation fit into the wider organisation of your movement?
+      placeholder: Tell us which district / region / county / etc you are part of
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Necker Type
+      description: Is this a special type of necker?
+      multiple: false
+      options:
+        - Normal
+        - Event Necker
+        - Historic
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: your-necker
+    attributes:
+      label: Describe your necker
+      description: Include a picture too! If you have a necker badge, please include a close up of it.
+    validations:
+      required: true
+  - type: textarea
+    id: more-info
+    attributes:
+      label: More Information
+      description: What else can you tell us about the organisation or necker?
+      value: |
+        Include anything at all here, such as:
+        - When your group was founded
+        - Where your group is located
+        - Why is your necker those colours?
+        - When was this necker adopted?
+        - When was this necker retired?
+        - Anything else you might want to include!
+    validations:
+      required: false
