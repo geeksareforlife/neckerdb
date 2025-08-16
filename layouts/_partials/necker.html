@@ -19,6 +19,8 @@
       {{- partial "neckers/plainSplit.html" . -}}
    {{- else if eq .Params.showNecker "centre-stripe" -}}
       {{- partial "neckers/centreStripe.html" . -}}
+   {{- else if eq .Params.showNecker "unknown" -}}
+      {{- partial "neckers/unknown.html" . -}}
    {{- end -}}
    {{- if .Params.showBadge -}}
      {{- with resources.Get (printf "images/neckerbadges/%s" .Params.badgeFile) -}}

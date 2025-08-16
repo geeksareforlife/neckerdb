@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-07-21T19:00:00Z
 params:
+  topLevel: true
   showNecker: triple
   rightOuterBorder: tsa-royal-blue
   leftOuterBorder: tsa-royal-blue
