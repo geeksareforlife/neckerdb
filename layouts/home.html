@@ -15,4 +15,16 @@
           </div>
         </div>
       </div>
+
+      <div class="mt-8 text-center px-20">
+        <div class="text-5xl lg:text-3xl mb-5">Recently Added</div>
+
+        {{ $pages := where .Site.AllPages "Type" "like" `necker` }}
+        {{/* Remove unknown neckers */}}
+        {{ $pages = where $pages "Params.showNecker" "ne" "unknown" }}
+
+        {{ $pages = first 6 $pages.ByPublishDate.Reverse }}
+
+        {{ partial "neckerListHome.html" $pages }}
+      </div>
 {{- end -}}

@@ -1,0 +1,25 @@
+  <div class="grid gap-3 mb-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6">
+    {{- range $index, $element := . -}}
+      {{- $hideClass := "" -}}
+      {{- if ge $index 2 -}}
+        {{- $hideClass = printf "%s hidden" $hideClass -}}
+      {{- end -}}
+      {{- if eq $index 2 -}}
+        {{- $hideClass = printf "%s md:block" $hideClass -}}
+      {{- end -}}
+      {{- if eq $index 3 -}}
+        {{- $hideClass = printf "%s lg:block" $hideClass -}}
+      {{- end -}}
+      {{- if gt $index 3 -}}
+        {{- $hideClass = printf "%s 2xl:block" $hideClass -}}
+      {{- end -}}
+      <a class="{{ $hideClass }} flex flex-col bg-gray-100 overflow-hidden rounded-lg bg-white shadow" href="{{ .RelPermalink }}">
+        <div class="py-3 divide-y">
+          <div class="px-2 mb-3 text-xs">
+          {{- partial "necker.html" $element -}}
+          </div>
+          <div class="pt-2 px-2 mb-auto text-center text-xl lg:text-base">{{ .Title }}</div>
+        </div>
+      </a>
+    {{- end -}}
+  </div>

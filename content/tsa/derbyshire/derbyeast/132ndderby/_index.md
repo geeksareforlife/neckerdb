@@ -1,7 +1,7 @@
 ---
 title: 132nd Derby (2nd Chaddesden)
 type: necker
-publishDate: 2025-07-25T14:00:00Z
+publishDate: 2025-08-16T18:00:00Z
 params:
   showNecker: plain-split
   leftMain: tsa-scarlet
