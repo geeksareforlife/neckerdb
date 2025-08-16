@@ -1,4 +1,4 @@
-baseURL = "https://neckerdb.netlify.app/"
+baseURL = "https://neckerdb.co.uk/"
 
 disableKinds = ["taxonomy", "term"]
 
