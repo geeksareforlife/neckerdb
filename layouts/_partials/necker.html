@@ -25,4 +25,9 @@
        <img src="{{ .RelPermalink }}" class="absolute bottom-[{{- $.Params.badgeBottom -}}%] w-[{{- $.Params.badgeWidth -}}%] left-1/2 transform -translate-x-1/2">
      {{- end -}}
    {{- end -}}
+   {{- if eq .Params.neckerType "event" -}}
+      <i class="fa-light fa-calendar-star fa-2x absolute bottom-0 left-0" title="Event Necker"></i>
+   {{- else if eq .Params.neckerType "historic" -}}
+      <i class="fa-light fa-monument fa-2x absolute bottom-0 left-0" title="Historic"></i>
+   {{- end -}}
 </div>
