@@ -1,5 +1,8 @@
 {{ define "main" }}
-  <article class="prose prose-lg lg:prose-sm">
+  {{- with .Resources.GetMatch "background.*" -}}
+    <img src="{{ .Permalink }}" alt="" aria-hidden="true" class="absolute inset-0 -z-10 size-full object-cover">
+  {{- end -}}
+  <article class="bg-white rounded-2xl p-5 prose prose-xl md:prose-base max-w-none md:mx-20 lg:mx-30 xl:mx-40 mb-5">
     <h1>{{ .Title }}</h1>
     {{ .Content }}
   </article>

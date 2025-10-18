@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="font-body bg-gray-50">
+<html lang="en" class="font-body bg-gray-50 h-full">
   <head>
     <meta charset="utf-8" />
     <title>
@@ -21,16 +21,16 @@
     <script src="https://kit.fontawesome.com/6f1a8b22a0.js" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
-  <body class="mb-10">
+  <body class="flex min-h-full flex-col">
     <header{{- if .IsHome }} class="absolute inset-x-0 top-0 z-50"{{- end -}}>
       {{- partial "dev-size-indicator.html" . -}}
       {{ partial "topnav.html" . }}
     </header>
-    <main>
+    <main class="grow{{- if not .IsHome }} flex{{ end -}}">
       {{- if .IsHome -}}
         {{ block "main" . }}{{ end }}
       {{- else -}}
-        <div class="px-4 lg:px-8">
+        <div class="pt-3 px-4 lg:px-8 relative grow">
           {{ partial "breadcrumbs.html" . }}
           {{ block "main" . }}{{ end }}
         </div>
