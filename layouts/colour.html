@@ -1,0 +1,40 @@
+{{ define "main" }}
+  <article class="bg-white rounded-2xl p-5 prose prose-xl md:prose-base max-w-none md:mx-20 lg:mx-30 xl:mx-40 mb-5">
+    <h1>{{ .Title }}</h1>
+
+    {{- $currentSource := "" -}}
+
+    {{- range $name, $colour := .Site.Params.colours -}}
+      {{- $matches := findRESubmatch `(^.+?)\-(.*)$` $name -}}
+      {{- $source := index (index $matches 0) 1 -}}
+      {{- $colourName := index (index $matches 0) 2 -}}
+      
+      {{- if ne $source $currentSource -}}
+        {{- if ne $currentSource "" -}}
+          </div>
+        {{- end -}}
+        {{- $currentSource = $source -}}
+        <h2>{{ index site.Params.sources $currentSource }}</h2>
+        <div class="grid grid-cols-6 gap-4 not-prose">
+      {{- end -}}
+
+      {{- $r := int (printf "0x%s" (substr $colour 1 2)) -}}
+      {{- $g := int (printf "0x%s" (substr $colour 3 2)) -}}
+      {{- $b := int (printf "0x%s" (substr $colour 5 2)) -}}
+      {{- $threshold := add (mul $r 0.299) (mul $g 0.587) (mul $b 0.114) -}}
+
+      {{- $textColour := "text-white" -}}
+      {{- if gt $threshold 186 -}}
+        {{- $textColour = "text-black" -}}
+      {{- end -}}
+
+      <div style="background-color: {{ $colour }}" class="rounded-lg p-3 h-20 border-2 border-black">
+        <p class="text-xs text-center {{ $textColour -}} ">{{- $colourName -}}</p>
+      </div>
+
+
+
+    {{- end -}}
+
+  </article>
+{{ end }}

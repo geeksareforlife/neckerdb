@@ -29,6 +29,10 @@ disableKinds = ["taxonomy", "term"]
     target = "$1"
 
 [params]
+  [params.sources]
+    tsa = "The Scout Association"
+    sn = "Simply Neckers"
+    1ss = "One Stop Scouting"
   [params.colours]
     tsa-black = "#221f20"
     tsa-bright-orange = "#f9a930"
