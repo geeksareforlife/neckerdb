@@ -29,6 +29,7 @@ disableKinds = ["taxonomy", "term"]
     target = "$1"
 
 [params]
+  borderColour = "#000000"
   [params.sources]
     tsa = "The Scout Association"
     sn = "Simply Neckers"
