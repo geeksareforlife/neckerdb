@@ -23,12 +23,12 @@
 
   {{ if gt .RegularPages.Len 0 }}
     <h2 class="font-bold text-2xl mb-6 lg:mb-4">Additional Neckers</h2>
-    {{ partial "neckerList.html" .RegularPages }}
+    {{ partial "neckerList.html" .RegularPages.ByTitle }}
   {{- end -}}
 
   {{ if gt .Sections.Len 0 }}
     <h2 class="font-bold text-2xl mb-6 lg:mb-4">Sub Organisations</h2>
-    {{ partial "neckerList.html" .Sections }}
+    {{ partial "neckerList.html" .Sections.ByTitle }}
   {{- end -}}
   </div>
 {{- end -}}
