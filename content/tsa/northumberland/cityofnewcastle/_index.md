@@ -1,5 +1,5 @@
 ---
-title: City of Newcastle District
+title: City of Newcastle Scouts District
 type: necker
 layout: section
 publishDate: 2025-10-20T12:00:00Z

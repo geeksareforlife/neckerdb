@@ -1,5 +1,5 @@
 ---
-title: Chiltern North District
+title: Chiltern North Scouts District
 type: necker
 layout: section
 publishDate: 2025-11-10T12:00:00Z

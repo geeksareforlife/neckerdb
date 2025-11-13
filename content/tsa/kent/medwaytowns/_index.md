@@ -1,5 +1,5 @@
 ---
-title: Medway Towns District
+title: Medway Towns Scouts District
 type: necker
 publishDate: 2025-10-20T14:00:00Z
 params:

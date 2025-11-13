@@ -1,5 +1,5 @@
 ---
-title: Oxford Spires District Scouts
+title: Oxford Spires Scouts District
 type: necker
 layout: section
 publishDate: 2025-11-12T12:00:00Z

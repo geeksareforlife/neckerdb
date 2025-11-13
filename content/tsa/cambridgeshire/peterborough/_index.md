@@ -1,5 +1,5 @@
 ---
-title: Peterborough District
+title: Peterborough Scouts District
 type: necker
 layout: section
 publishDate: 2025-11-12T12:00:00Z

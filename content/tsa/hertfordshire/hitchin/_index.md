@@ -1,5 +1,5 @@
 ---
-title: Hitchin District
+title: Hitchin Scouts District
 type: necker
 layout: section
 publishDate: 2025-11-10T12:00:00Z
