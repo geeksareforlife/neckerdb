@@ -6,8 +6,7 @@ publishDate: 2025-11-14T12:00:00Z
 params:
   todo: Needs a badge
   showNecker: single
-  leftOuterBorder: tsa-bright-orange
-  rightOuterBorder: tsa-bright-orange
+  outerBorder: tsa-bright-orange
   main: tsa-scout-green
   info:
     - {type: location, data: East Grinstead, order: 2}

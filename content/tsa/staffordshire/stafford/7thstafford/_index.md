@@ -6,8 +6,7 @@ publishDate: 2025-11-10T12:00:00Z
 params:
   todo: Needs a badge
   showNecker: single
-  leftOuterBorder: tsa-lemon
-  rightOuterBorder: tsa-lemon
+  outerBorder: tsa-lemon
   main: tsa-royal-blue
   info:
     - {type: location, data: unknown, order: 2}

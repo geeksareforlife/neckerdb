@@ -5,8 +5,7 @@ layout: section
 publishDate: 2025-11-11T13:00:00Z
 params:
   showNecker: single
-  leftOuterBorder: sn-scout-green
-  rightOuterBorder: sn-scout-green
+  outerBorder: sn-scout-green
   main: sn-maroon
   info:
     - {type: location, data: "Littleover, Derby", order: 2}

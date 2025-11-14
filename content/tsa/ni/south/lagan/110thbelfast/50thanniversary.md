@@ -6,8 +6,7 @@ publishDate: 2025-11-14T12:00:00Z
 params:
   showNecker: single
   neckerType: event
-  leftOuterBorder: tsa-white
-  rightOuterBorder: tsa-white
+  outerBorder: tsa-white
   main: tsa-maroon
   showBadge: true
   badgeFile: 110thbelfast50th.png

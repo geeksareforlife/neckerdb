@@ -5,8 +5,7 @@ layout: section
 publishDate: 2025-11-10T12:00:00Z
 params:
   showNecker: single
-  leftOuterBorder: sn-royal-blue
-  rightOuterBorder: sn-royal-blue
+  outerBorder: sn-royal-blue
   main: sn-emerald
   info:
     - {type: location, data: unknown, order: 2}

@@ -15,4 +15,15 @@
 
   {{ end }}
 
+  <h1 class="text-2xl my-10">Singles</h1>
+
+  {{ $pages := where .Site.AllPages "Type" "like" `necker` }}
+  {{ $pages = where $pages "Params.showNecker" "eq" "single" }}
+
+  {{ range $pages }}
+
+  <p>{{ .File.Path }}</p>
+
+  {{ end }}
+
 {{ end }}

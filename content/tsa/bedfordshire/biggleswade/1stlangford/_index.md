@@ -6,8 +6,7 @@ publishDate: 2025-10-18T15:00:00Z
 params:
   todo: Needs a badge
   showNecker: single
-  rightOuterBorder: sn-scarlet
-  leftOuterBorder: sn-scarlet
+  outerBorder: sn-scarlet
   main: sn-kelly-green
   info:
     - {type: location, data: Langford, order: 2}

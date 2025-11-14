@@ -5,8 +5,7 @@ layout: section
 publishDate: 2025-11-12T12:00:00Z
 params:
   showNecker: single
-  leftOuterBorder: tsa-white
-  rightOuterBorder: tsa-white
+  outerBorder: tsa-white
   main: tsa-scout-green
   showBadge: true
   badgeFile: 1stthame.png

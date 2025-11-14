@@ -5,8 +5,7 @@ layout: section
 publishDate: 2025-11-09T12:00:00Z
 params:
   showNecker: single
-  rightOuterBorder: sn-sky-blue
-  leftOuterBorder: sn-sky-blue
+  outerBorder: sn-sky-blue
   main: sn-maroon
   neckerType: historic
   info:
