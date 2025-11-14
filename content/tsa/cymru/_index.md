@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-11-10T12:00:00Z
 params:
+  todo: Confirm if needs a badge
   showNecker: double
   leftOuterBorder: tsa-green
   rightOuterBorder: tsa-green
