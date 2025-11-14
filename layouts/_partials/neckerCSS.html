@@ -54,6 +54,16 @@
 }
 {{- end -}}
 
+{{if .Params.innerBorder -}}
+#{{- $prefix -}}-inner-border path {
+	color: {{- if eq "#" (substr .Params.innerBorder 0 1) -}}
+					{{- .Params.innerBorder -}}
+				{{- else -}}
+					{{- index .Site.Params.colours .Params.innerBorder -}}
+				{{- end -}};
+}
+{{- end -}}
+
 {{if .Params.rightInnerBorder -}}
 #{{- $prefix -}}-right-inner-border path {
 	color: {{- if eq "#" (substr .Params.rightInnerBorder 0 1) -}}

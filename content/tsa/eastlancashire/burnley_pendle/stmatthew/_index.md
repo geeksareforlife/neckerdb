@@ -4,10 +4,8 @@ type: necker
 publishDate: 2025-11-10T12:00:00Z
 params:
   showNecker: double
-  leftOuterBorder: tsa-sky-blue
-  rightOuterBorder: tsa-sky-blue
-  leftInnerBorder: tsa-royal-blue
-  rightInnerBorder: tsa-royal-blue
+  outerBorder: tsa-sky-blue
+  innerBorder: tsa-royal-blue
   main: tsa-scarlet
   info:
     - {type: location, data: Burnley, order: 2}

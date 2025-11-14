@@ -6,10 +6,8 @@ publishDate: 2025-11-10T12:00:00Z
 params:
   todo: Confirm if needs a badge
   showNecker: double
-  leftOuterBorder: tsa-green
-  rightOuterBorder: tsa-green
-  leftInnerBorder: tsa-white
-  rightInnerBorder: tsa-white
+  outerBorder: tsa-green
+  innerBorder: tsa-white
   main: tsa-scarlet
   info:
     - {type: location, data: Caerphilly, order: 2}

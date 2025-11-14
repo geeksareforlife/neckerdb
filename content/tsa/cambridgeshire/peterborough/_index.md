@@ -6,10 +6,8 @@ publishDate: 2025-11-12T12:00:00Z
 params:
   todo: Change to ribbon type
   showNecker: double
-  leftOuterBorder: sn-black
-  rightOuterBorder: sn-black
-  leftInnerBorder: sn-sky-blue
-  rightInnerBorder: sn-sky-blue
+  outerBorder: sn-black
+  innerBorder: sn-sky-blue
   main: sn-black
   showBadge: true
   badgeFile: peterboroughdistrict.png

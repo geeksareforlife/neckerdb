@@ -5,10 +5,8 @@ layout: section
 publishDate: 2025-11-12T12:00:00Z
 params:
   showNecker: double
-  leftOuterBorder: tsa-grey
-  rightOuterBorder: tsa-grey
-  leftInnerBorder: tsa-gold
-  rightInnerBorder: tsa-gold
+  outerBorder: tsa-grey
+  innerBorder: tsa-gold
   main: tsa-scarlet
   showBadge: true
   badgeFile: redkitesexplorers.png
