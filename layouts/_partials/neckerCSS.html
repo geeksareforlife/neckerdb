@@ -34,6 +34,16 @@
 }
 {{- end -}}
 
+{{if .Params.middleBorder -}}
+#{{- $prefix -}}-middle-border path {
+	color: {{- if eq "#" (substr .Params.middleBorder 0 1) -}}
+					{{- .Params.middleBorder -}}
+				{{- else -}}
+					{{- index .Site.Params.colours .Params.middleBorder -}}
+				{{- end -}};
+}
+{{- end -}}
+
 {{if .Params.rightMiddleBorder -}}
 #{{- $prefix -}}-right-middle-border path {
 	color: {{- if eq "#" (substr .Params.rightMiddleBorder 0 1) -}}

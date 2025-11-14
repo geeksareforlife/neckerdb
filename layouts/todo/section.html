@@ -15,10 +15,10 @@
 
   {{ end }}
 
-  <h1 class="text-2xl my-10">Doubles</h1>
+  <h1 class="text-2xl my-10">Triples</h1>
 
   {{ $pages := where .Site.AllPages "Type" "like" `necker` }}
-  {{ $pages = where $pages "Params.showNecker" "eq" "double" }}
+  {{ $pages = where $pages "Params.showNecker" "eq" "triple" }}
 
   {{ range $pages }}
 
