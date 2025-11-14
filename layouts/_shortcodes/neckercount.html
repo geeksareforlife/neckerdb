@@ -1,0 +1,8 @@
+{{- $countWhat := .Get 0 -}}
+{{- $pages := where .Site.AllPages "Type" "like" `necker` -}}
+{{- if eq $countWhat "unknown" -}}
+{{- $pages = where $pages "Params.showNecker" "eq" "unknown" -}}
+{{- else -}}
+{{- $pages = where $pages "Params.showNecker" "ne" "unknown" -}}
+{{- end -}}
+{{- $pages.Len -}}
