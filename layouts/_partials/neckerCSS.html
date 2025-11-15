@@ -4,6 +4,16 @@
 	width: 100%;
 }
 
+{{if .Params.outerBorder -}}
+#{{- $prefix -}}-outer-border path {
+	color: {{- if eq "#" (substr .Params.outerBorder 0 1) -}}
+					{{- .Params.outerBorder -}}
+				{{- else -}}
+					{{- index .Site.Params.colours .Params.outerBorder -}}
+				{{- end -}};
+}
+{{- end -}}
+
 {{if .Params.rightOuterBorder -}}
 #{{- $prefix -}}-right-outer-border path {
 	color: {{- if eq "#" (substr .Params.rightOuterBorder 0 1) -}}
@@ -24,6 +34,16 @@
 }
 {{- end -}}
 
+{{if .Params.middleBorder -}}
+#{{- $prefix -}}-middle-border path {
+	color: {{- if eq "#" (substr .Params.middleBorder 0 1) -}}
+					{{- .Params.middleBorder -}}
+				{{- else -}}
+					{{- index .Site.Params.colours .Params.middleBorder -}}
+				{{- end -}};
+}
+{{- end -}}
+
 {{if .Params.rightMiddleBorder -}}
 #{{- $prefix -}}-right-middle-border path {
 	color: {{- if eq "#" (substr .Params.rightMiddleBorder 0 1) -}}
@@ -40,6 +60,16 @@
 					{{- .Params.leftMiddleBorder -}}
 				{{- else -}}
 					{{- index .Site.Params.colours .Params.leftMiddleBorder -}}
+				{{- end -}};
+}
+{{- end -}}
+
+{{if .Params.innerBorder -}}
+#{{- $prefix -}}-inner-border path {
+	color: {{- if eq "#" (substr .Params.innerBorder 0 1) -}}
+					{{- .Params.innerBorder -}}
+				{{- else -}}
+					{{- index .Site.Params.colours .Params.innerBorder -}}
 				{{- end -}};
 }
 {{- end -}}

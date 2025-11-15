@@ -16,19 +16,19 @@
       </div>
     </div>
     {{ end }}
-    <div class="prose prose-lg lg:prose-sm">
+    <div class="mt-4 prose prose-lg lg:prose-sm max-w-none">
       {{ .Content }}
     </div>
   </article>
 
   {{ if gt .RegularPages.Len 0 }}
     <h2 class="font-bold text-2xl mb-6 lg:mb-4">Additional Neckers</h2>
-    {{ partial "neckerList.html" .RegularPages }}
+    {{ partial "neckerList.html" .RegularPages.ByTitle }}
   {{- end -}}
 
   {{ if gt .Sections.Len 0 }}
     <h2 class="font-bold text-2xl mb-6 lg:mb-4">Sub Organisations</h2>
-    {{ partial "neckerList.html" .Sections }}
+    {{ partial "neckerListWeighted.html" .Sections }}
   {{- end -}}
   </div>
 {{- end -}}

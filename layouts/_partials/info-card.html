@@ -3,6 +3,8 @@
   {{- $title = "Location" -}}
 {{- else if eq .type "founded" -}}
   {{- $title = "Founded" -}}
+{{- else if eq .type "closed" -}}
+  {{- $title = "Closed" -}}
 {{- else if eq .type "eventdate" -}}
   {{- $title = "Event Date" -}}
 {{- end -}}

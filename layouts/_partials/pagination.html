@@ -18,7 +18,7 @@
 
 {{- /* Only do this if there are actually pages! */ -}}
 {{- if gt $page.Paginator.TotalPages 1 }}
-  <nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
+  <nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0 mb-8">
     {{- with .Paginator }}
 
       {{- /* Work out the current page number and the start and end */ -}}

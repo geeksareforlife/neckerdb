@@ -1,7 +1,7 @@
 {{- define "main" -}}
       <div class="relative isolate overflow-hidden pt-20 lg:pt-14">
         {{- $hero := resources.Get "images/colours.png" -}}
-        <img src="{{ $hero.Permalink }}" alt="" class="absolute inset-0 -z-10 size-full object-cover" />
+        <img src="{{ $hero.Permalink }}" alt="" aria-hidden="true" class="absolute inset-0 -z-10 size-full object-cover" />
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl py-12 sm:py-24 lg:py-36">
             <div class="text-center">
@@ -16,7 +16,7 @@
         </div>
       </div>
 
-      <div class="mt-8 text-center px-20">
+      <div class="mt-8 text-center px-20 xl:px-40">
         <div class="text-5xl lg:text-3xl mb-5">Recently Added</div>
 
         {{ $pages := where .Site.AllPages "Type" "like" `necker` }}
@@ -24,6 +24,36 @@
         {{ $pages = where $pages "Params.showNecker" "ne" "unknown" }}
 
         {{ $pages = first 6 $pages.ByPublishDate.Reverse }}
+
+        {{ partial "neckerListHome.html" $pages }}
+      </div>
+
+      <div class="my-8 text-center px-20 xl:px-40">
+        <div class="text-5xl lg:text-3xl mb-5">What is NeckerDB?</div>
+        <div class="text-left grid grid-cols-3 gap-6">
+          <div class="grid-cols-subgrid col-span-2 prose max-w-none">
+            <p>From bold stripes to checkerboard designs, every Scout or Guide group has a unique necker - and a story behind it.</p>
+            <p>The Necker Archive is a community-led project to document and showcase the rich diversity of neckerchiefs used by:</p>
+            <ul>
+              <li>Scout and Guide Groups</li>
+              <li>Districts, Counties, and Regions</li>
+              <li>Events, camps, and international exchanges</li>
+            </ul>
+            <p>Whether you're reminiscing, researching, or representing your group, you're in the right place.</p>
+          </div>
+          <div class="relative">
+            {{- $stars := resources.Get "images/stars.jpg" -}}
+            <img src="{{ $stars.Permalink }}" alt="" aria-hidden="true" class="absolute inset-0 -z-10 size-full object-cover rounded-xl" />
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center px-20 xl:px-40">
+        <div class="text-5xl lg:text-3xl mb-5">Browse by Association</div>
+
+        {{ $pages := where .Site.AllPages "Params.topLevel" "eq" true }}
+
+        {{ $pages = first 6 $pages.ByTitle }}
 
         {{ partial "neckerListHome.html" $pages }}
       </div>
