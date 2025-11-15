@@ -23,7 +23,7 @@
   </head>
   <body class="flex min-h-full flex-col">
     <header{{- if .IsHome }} class="absolute inset-x-0 top-0 z-50"{{- end -}}>
-      {{- partial "dev-size-indicator.html" . -}}
+      {{/* - partial "dev-size-indicator.html" . - */}}
       {{ partial "topnav.html" . }}
     </header>
     <main class="grow{{- if not .IsHome }} flex{{ end -}}">
