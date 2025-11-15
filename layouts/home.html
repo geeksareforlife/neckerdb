@@ -45,5 +45,16 @@
             {{- $stars := resources.Get "images/stars.jpg" -}}
             <img src="{{ $stars.Permalink }}" alt="" aria-hidden="true" class="absolute inset-0 -z-10 size-full object-cover rounded-xl" />
           </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center px-20 xl:px-40">
+        <div class="text-5xl lg:text-3xl mb-5">Browse by Association</div>
+
+        {{ $pages := where .Site.AllPages "Params.topLevel" "eq" true }}
+
+        {{ $pages = first 6 $pages.ByTitle }}
+
+        {{ partial "neckerListHome.html" $pages }}
       </div>
 {{- end -}}

@@ -3,6 +3,7 @@ title: Scouts Cymru
 type: necker
 layout: section
 publishDate: 2025-11-10T12:00:00Z
+weight: 1
 params:
   todo: Confirm if needs a badge
   showNecker: double

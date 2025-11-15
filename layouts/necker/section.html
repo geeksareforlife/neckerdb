@@ -28,7 +28,7 @@
 
   {{ if gt .Sections.Len 0 }}
     <h2 class="font-bold text-2xl mb-6 lg:mb-4">Sub Organisations</h2>
-    {{ partial "neckerList.html" .Sections.ByTitle }}
+    {{ partial "neckerListWeighted.html" .Sections }}
   {{- end -}}
   </div>
 {{- end -}}
