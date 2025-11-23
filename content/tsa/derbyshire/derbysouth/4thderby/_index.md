@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-11-11T13:00:00Z
 params:
+  sortTitle: 0004th Derby (Derwent)
   showNecker: plain
   main: tsa-khaki
   showBadge: true

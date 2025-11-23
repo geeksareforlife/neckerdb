@@ -3,6 +3,7 @@ title: Derwent valley
 type: necker
 publishDate: 2025-10-20T14:00:00Z
 params:
+  sortTitle: Derwent valley
   showNecker: single
   outerBorder: tsa-lemon
   main: tsa-emerald

@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-11-16T20:37:40Z
 params:
+  sortTitle: Lincolnshire Scouts
   showNecker: double
   outerBorder: tsa-scarlet
   innerBorder: tsa-scout-green

@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-07-25T13:00:00Z
 params:
+  sortTitle: Derby North Scouts District
   showNecker: double
   outerBorder: tsa-emerald
   innerBorder: tsa-scarlet

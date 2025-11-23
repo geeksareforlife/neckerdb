@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-11-16T21:59:10Z
 params:
+  sortTitle: 0009th Sittingbourne
   showNecker: plain
   main: sn-azure-blue
   info:

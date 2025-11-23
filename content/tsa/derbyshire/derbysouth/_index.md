@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-07-25T13:00:00Z
 params:
+  sortTitle: Derby South Scouts District
   showNecker: single
   outerBorder: sn-bright-orange
   main: sn-maroon

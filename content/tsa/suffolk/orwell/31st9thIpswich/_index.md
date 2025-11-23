@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-11-12T12:00:00Z
 params:
+  sortTitle: 0031st / 9th Ipswich (Britannia)
   showNecker: plain-split
   leftMain: tsa-black
   rightMain: tsa-scarlet

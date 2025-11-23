@@ -3,6 +3,7 @@ title: 1st Bradwell
 type: necker
 publishDate: 2025-10-20T14:00:00Z
 params:
+  sortTitle: 0001st Bradwell
   showNecker: single
   outerBorder: tsa-lemon
   main: tsa-black

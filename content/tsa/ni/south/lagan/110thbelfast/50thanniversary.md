@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-11-14T12:00:00Z
 params:
+  sortTitle: 0110th Belfast 50th Anniversary
   showNecker: single
   neckerType: event
   outerBorder: tsa-white

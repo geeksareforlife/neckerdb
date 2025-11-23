@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-11-16T12:00:00Z
 params:
+  sortTitle: 0001st Cleethorpes (Sea Scouts)
   showNecker: plain-split
   leftMain: tsa-navy-blue
   rightMain: tsa-white

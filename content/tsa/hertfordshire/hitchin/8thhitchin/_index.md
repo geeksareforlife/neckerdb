@@ -3,6 +3,7 @@ title: 8th Hitchin (Oughton)
 type: necker
 publishDate: 2025-11-10T12:00:00Z
 params:
+  sortTitle: 0008th Hitchin (Oughton)
   showNecker: plain
   main: tsa-maroon
   info:

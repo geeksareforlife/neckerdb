@@ -7,7 +7,7 @@
   {{ $pages := where .Site.AllPages "Type" "like" `necker` }}
   {{/* Remove unknown neckers */}}
   {{ $pages = where $pages "Params.showNecker" "eq" "unknown" }}
-  {{ $paginator := .Paginate $pages.ByPublishDate 24 }}
+  {{ $paginator := .Paginate ($pages.ByParam "sortTitle") 24 }}
 
   {{ partial "neckerList.html" $paginator.Pages }}
 

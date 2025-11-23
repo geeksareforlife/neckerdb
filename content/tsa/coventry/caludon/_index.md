@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-11-19T20:39:40Z
 params:
+  sortTitle: Caludon Scouts District
   showNecker: plain
   main: tsa-scarlet
   info:

@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-11-16T22:03:45Z
 params:
+  sortTitle: Dragon Explorers
   showNecker: single
   outerBorder: tsa-scarlet
   main: tsa-white

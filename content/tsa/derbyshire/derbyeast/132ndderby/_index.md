@@ -3,6 +3,7 @@ title: 132nd Derby (2nd Chaddesden)
 type: necker
 publishDate: 2025-08-16T18:00:00Z
 params:
+  sortTitle: 0132nd Derby (2nd Chaddesden)
   showNecker: plain-split
   leftMain: tsa-scarlet
   rightMain: tsa-emerald

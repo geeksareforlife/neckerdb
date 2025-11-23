@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-11-19T20:29:02Z
 params:
+  sortTitle: Tonbridge Scouts District
   showNecker: unknown
   info:
     - {type: location, data: unknown, order: 2}

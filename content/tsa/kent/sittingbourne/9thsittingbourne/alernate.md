@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-11-16T22:00:19Z
 params:
+  sortTitle: 0009th Sittingbourne Alternate
   showNecker: single
   outerBorder: tsa-black
   main: tsa-scarlet

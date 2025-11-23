@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-11-19T20:43:23Z
 params:
+  sortTitle: 0013th Coventry (Holbrooks)
   showNecker: single
   outerBorder: tsa-gold
   main: tsa-black

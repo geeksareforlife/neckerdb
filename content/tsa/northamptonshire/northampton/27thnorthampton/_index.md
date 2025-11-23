@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-11-16T20:04:42Z
 params:
+  sortTitle: 0027th Northampton
   showNecker: double-split
   leftOuterBorder: tsa-scout-purple
   rightOuterBorder: tsa-scout-purple
