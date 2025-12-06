@@ -10,7 +10,7 @@ params:
   innerBorder: tsa-scout-green
   main: tsa-lemon
   showbadge: true
-  badgeFile: lincolnshire.png
+  badgeFile: lincolnshire2.png
   badgeWidth: 8
   badgeBottom: 25
   info:

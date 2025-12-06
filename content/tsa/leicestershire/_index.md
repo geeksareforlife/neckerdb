@@ -9,6 +9,10 @@ params:
   outerBorder: tsa-white
   innerBorder: tsa-lemon
   main: tsa-scarlet
+  showbadge: true
+  badgeFile: leicestershire.png
+  badgeWidth: 8
+  badgeBottom: 25
   info:
     - {type: location, data: Leicester Forest East, Leicester, order: 2}
 ---
