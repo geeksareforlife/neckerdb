@@ -4,6 +4,7 @@ type: necker
 layout: page
 publishDate: 2025-10-18T15:00:00Z
 params:
+  sortTitle: Switzerland Expedition
   showNecker: single-split
   rightOuterBorder: sn-white
   leftOuterBorder: sn-scarlet

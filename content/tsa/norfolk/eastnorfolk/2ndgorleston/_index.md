@@ -3,6 +3,7 @@ title: 2nd Gorleston
 type: necker
 publishDate: 2025-10-20T14:00:00Z
 params:
+  sortTitle: 0002nd Gorleston
   showNecker: single
   outerBorder: tsa-lemon
   main: tsa-emerald

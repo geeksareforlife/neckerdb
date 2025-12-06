@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-07-21T19:00:00Z
 params:
+  sortTitle: The Scout Association (UK)
   topLevel: true
   showNecker: triple
   outerBorder: tsa-royal-blue

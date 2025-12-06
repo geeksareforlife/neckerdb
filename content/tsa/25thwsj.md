@@ -4,6 +4,7 @@ type: necker
 layout: page
 publishDate: 2025-07-25T19:00:00Z
 params:
+  sortTitle: 0025th World Scout Jamboree UK Contingent
   showNecker: triple
   outerBorder: tsa-royal-blue
   middleBorder: tsa-scarlet

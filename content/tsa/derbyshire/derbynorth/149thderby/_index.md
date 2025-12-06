@@ -4,6 +4,7 @@ title: 149th Derby (Mickleover Methodist)
 type: necker
 layout: section
 params:
+  sortTtitle: 0149th Derby (Mickleover Methodist)
   showNecker: False
   rightOuterBorder: tsa-bright-orange
   leftOuterBorder: tsa-bright-orange

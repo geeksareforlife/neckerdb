@@ -4,6 +4,7 @@ type: necker
 layout: section
 publishDate: 2025-10-18T15:00:00Z
 params:
+  sortTitle: 0001st Langford
   todo: Needs a badge
   showNecker: single
   outerBorder: sn-scarlet

@@ -3,6 +3,7 @@ title: Durham Scouts
 type: necker
 publishDate: 2025-11-09T12:00:00Z
 params:
+  sortTitle: Durham Scouts
   showNecker: plain
   main: sn-lavender
   info:

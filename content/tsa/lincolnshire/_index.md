@@ -1,0 +1,18 @@
+---
+title: Lincolnshire Scouts
+type: necker
+layout: section
+publishDate: 2025-11-16T20:37:40Z
+params:
+  sortTitle: Lincolnshire Scouts
+  showNecker: double
+  outerBorder: tsa-scarlet
+  innerBorder: tsa-scout-green
+  main: tsa-lemon
+  showbadge: true
+  badgeFile: lincolnshire2.png
+  badgeWidth: 8
+  badgeBottom: 25
+  info:
+    - {type: location, data: Lincoln, order: 2}
+---

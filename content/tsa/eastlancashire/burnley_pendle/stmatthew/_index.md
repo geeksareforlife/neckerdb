@@ -3,6 +3,7 @@ title: St Matthew with Holy Trinity
 type: necker
 publishDate: 2025-11-10T12:00:00Z
 params:
+  sortTitle: St Matthew with Holy Trinity
   showNecker: double
   outerBorder: tsa-sky-blue
   innerBorder: tsa-royal-blue
