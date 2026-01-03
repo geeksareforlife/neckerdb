@@ -8,6 +8,10 @@ params:
   showNecker: plain-split
   leftMain: tsa-lemon
   rightMain: tsa-black
+  showbadge: true
+  badgeFile: caludon-trident.png
+  badgeWidth: 10
+  badgeBottom: 15
   info:
     - {type: location, data: unknown, order: 2}
 ---
