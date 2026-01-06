@@ -1,10 +1,10 @@
 ---
-title: Salisbury & South Wilts Scouts District
+title: Hastings, Rye & District
 type: necker
 layout: section
-publishDate: 2026-01-06T11:12:44Z
+publishDate: 2026-01-06T16:00:38Z
 params:
-  sortTitle: Salisbury & South Wilts
+  sortTitle: Hastings, Rye & District
   showNecker: unknown
   info:
     - {type: location, data: unknown, order: 2}

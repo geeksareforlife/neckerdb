@@ -1,10 +1,10 @@
 ---
-title: Salisbury & South Wilts Scouts District
+title: Northen Europe Scouts District
 type: necker
 layout: section
-publishDate: 2026-01-06T11:12:44Z
+publishDate: 2026-01-06T15:35:29Z
 params:
-  sortTitle: Salisbury & South Wilts
+  sortTitle: Northen Europe Scouts District
   showNecker: unknown
   info:
     - {type: location, data: unknown, order: 2}

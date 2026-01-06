@@ -1,10 +1,10 @@
 ---
-title: Salisbury & South Wilts Scouts District
+title: Hereford & Worcester Scouts
 type: necker
 layout: section
-publishDate: 2026-01-06T11:12:44Z
+publishDate: 2026-01-06T14:32:54Z
 params:
-  sortTitle: Salisbury & South Wilts
+  sortTitle: Hereford & Worcester
   showNecker: unknown
   info:
     - {type: location, data: unknown, order: 2}
