@@ -6,8 +6,9 @@ publishDate: 2025-11-15T12:00:00Z
 params:
   sortTitle: 0001st Whitstable
   showNecker: single
-  outerBorder: tsa-black
-  main: tsa-gold
+  outerBorder: sn-black
+  main: sn-gold
   info:
-    - {type: location, data: unknown, order: 2}
+    - {type: location, data: Whitstable, order: 2}
+    - {type: founded, data: 1909, order: 1}
 ---
