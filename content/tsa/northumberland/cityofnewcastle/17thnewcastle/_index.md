@@ -1,5 +1,5 @@
 ---
-title: 17th Newcastle
+title: 17th Newcastle (St George's)
 type: necker
 layout: section
 publishDate: 2025-10-20T12:00:00Z

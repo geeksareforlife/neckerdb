@@ -12,10 +12,10 @@ params:
   main: tsa-royal-blue
   showBadge: true
   badgeFile: 25thwsj.png
-  badgeWidth: 6
-  badgeBottom: 35
+  badgeWidth: 10
+  badgeBottom: 40
   neckerType: event
   info:
-    - {type: location, data: Buan-gun, South Korea, order: 2}
+    - {type: location, data: "Buan-gun, South Korea", order: 2}
     - {type: eventdate, data: 1st - 12th August 2023, order: 1}
 ---
