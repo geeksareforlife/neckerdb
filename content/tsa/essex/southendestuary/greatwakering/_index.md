@@ -1,5 +1,5 @@
 ---
-title: Great Wakering
+title: Great Wakering (Sea Scouts)
 type: necker
 layout: section
 publishDate: 2026-01-09T13:02:00Z
