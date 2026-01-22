@@ -44,6 +44,8 @@ module.exports = function(grunt) {
                 
             });
 
+            grunt.log.debug(JSON.stringify(pagesIndex));
+
             return pagesIndex;
         };
 
@@ -60,9 +62,18 @@ module.exports = function(grunt) {
                 grunt.verbose.errorlns(e.message);
             }
 
-            grunt.log.debug(JSON.stringify(frontMatter));
+            var href = S(abspath).chompLeft(CONTENT_PATH_PREFIX).chompRight(".md").s;
+            // href for _index.md files stops at the folder name
+            if (filename === "_index.md") {
+                href = S(abspath).chompLeft(CONTENT_PATH_PREFIX).chompRight(filename).s;
+            }
 
-        	return {};
+        	pageIndex =  {
+        		href: href,
+        		title: frontMatter.title
+        	};
+
+        	return pageIndex;
         }
 
         indexPages();

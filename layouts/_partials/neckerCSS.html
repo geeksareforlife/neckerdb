@@ -9,7 +9,7 @@
 	color: {{- if eq "#" (substr .Params.outerBorder 0 1) -}}
 					{{- .Params.outerBorder -}}
 				{{- else -}}
-					{{- index .Site.Params.colours .Params.outerBorder -}}
+					{{- index (index .Site.Params.colours .Params.outerBorder) "hex" -}}
 				{{- end -}};
 }
 {{- end -}}
@@ -19,7 +19,7 @@
 	color: {{- if eq "#" (substr .Params.rightOuterBorder 0 1) -}}
 					{{- .Params.rightOuterBorder -}}
 				{{- else -}}
-					{{- index .Site.Params.colours .Params.rightOuterBorder -}}
+					{{- index (index .Site.Params.colours .Params.rightOuterBorder) "hex" -}}
 				{{- end -}};
 }
 {{- end -}}
@@ -29,7 +29,7 @@
 	color: {{- if eq "#" (substr .Params.leftOuterBorder 0 1) -}}
 					{{- .Params.leftOuterBorder -}}
 				{{- else -}}
-					{{- index .Site.Params.colours .Params.leftOuterBorder -}}
+					{{- index (index .Site.Params.colours .Params.leftOuterBorder) "hex" -}}
 				{{- end -}};
 }
 {{- end -}}
@@ -39,7 +39,7 @@
 	color: {{- if eq "#" (substr .Params.middleBorder 0 1) -}}
 					{{- .Params.middleBorder -}}
 				{{- else -}}
-					{{- index .Site.Params.colours .Params.middleBorder -}}
+					{{- index (index .Site.Params.colours .Params.middleBorder) "hex" -}}
 				{{- end -}};
 }
 {{- end -}}
@@ -49,7 +49,7 @@
 	color: {{- if eq "#" (substr .Params.rightMiddleBorder 0 1) -}}
 					{{- .Params.rightMiddleBorder -}}
 				{{- else -}}
-					{{- index .Site.Params.colours .Params.rightMiddleBorder -}}
+					{{- index (index .Site.Params.colours .Params.rightMiddleBorder) "hex" -}}
 				{{- end -}};
 }
 {{- end -}}
@@ -59,7 +59,7 @@
 	color: {{- if eq "#" (substr .Params.leftMiddleBorder 0 1) -}}
 					{{- .Params.leftMiddleBorder -}}
 				{{- else -}}
-					{{- index .Site.Params.colours .Params.leftMiddleBorder -}}
+					{{- index (index .Site.Params.colours .Params.leftMiddleBorder) "hex" -}}
 				{{- end -}};
 }
 {{- end -}}
@@ -69,7 +69,7 @@
 	color: {{- if eq "#" (substr .Params.innerBorder 0 1) -}}
 					{{- .Params.innerBorder -}}
 				{{- else -}}
-					{{- index .Site.Params.colours .Params.innerBorder -}}
+					{{- index (index .Site.Params.colours .Params.innerBorder) "hex" -}}
 				{{- end -}};
 }
 {{- end -}}
@@ -79,7 +79,7 @@
 	color: {{- if eq "#" (substr .Params.rightInnerBorder 0 1) -}}
 					{{- .Params.rightInnerBorder -}}
 				{{- else -}}
-					{{- index .Site.Params.colours .Params.rightInnerBorder -}}
+					{{- index (index .Site.Params.colours .Params.rightInnerBorder) "hex" -}}
 				{{- end -}};
 }
 {{- end -}}
@@ -89,7 +89,7 @@
 	color: {{- if eq "#" (substr .Params.leftInnerBorder 0 1) -}}
 					{{- .Params.leftInnerBorder -}}
 				{{- else -}}
-					{{- index .Site.Params.colours .Params.leftInnerBorder -}}
+					{{- index (index .Site.Params.colours .Params.leftInnerBorder) "hex" -}}
 				{{- end -}};
 }
 {{- end -}}
@@ -99,7 +99,7 @@
 	color: {{- if eq "#" (substr .Params.centre 0 1) -}}
 					{{- .Params.centre -}}
 				{{- else -}}
-					{{- index .Site.Params.colours .Params.centre -}}
+					{{- index (index .Site.Params.colours .Params.centre) "hex" -}}
 				{{- end -}};
 }
 {{- end -}}
@@ -109,7 +109,7 @@
 	color: {{- if eq "#" (substr .Params.main 0 1) -}}
 					{{- .Params.main -}}
 				{{- else -}}
-					{{- index .Site.Params.colours .Params.main -}}
+					{{- index (index .Site.Params.colours .Params.main) "hex" -}}
 				{{- end -}};
 }
 {{- end -}}
@@ -119,7 +119,7 @@
 	color: {{- if eq "#" (substr .Params.rightMain 0 1) -}}
 					{{- .Params.rightMain -}}
 				{{- else -}}
-					{{- index .Site.Params.colours .Params.rightMain -}}
+					{{- index (index .Site.Params.colours .Params.rightMain) "hex" -}}
 				{{- end -}};
 }
 {{- end -}}
@@ -129,7 +129,7 @@
 	color: {{- if eq "#" (substr .Params.leftMain 0 1) -}}
 					{{- .Params.leftMain -}}
 				{{- else -}}
-					{{- index .Site.Params.colours .Params.leftMain -}}
+					{{- index (index .Site.Params.colours .Params.leftMain) "hex" -}}
 				{{- end -}};
 }
 {{- end -}}

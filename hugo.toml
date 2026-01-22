@@ -37,158 +37,468 @@ disableKinds = ["taxonomy", "term"]
     mbc = "MBC Neckers & Badges"
     war = "Warrens"
   [params.colours]
-    tsa-black = "#221f20"
-    tsa-bright-orange = "#f9a930"
-    tsa-brown = "#9b7747"
-    tsa-dark-red = "#94362a"
-    tsa-emerald = "#42ab66"
-    tsa-gold = "#ffdb7c"
-    tsa-green = "#188951"
-    tsa-grey = "#86858b"
-    tsa-khaki = "#d5ba8f"
-    tsa-lemon = "#fdfe63"
-    tsa-maroon = "#7c3f47"
-    tsa-navy-blue = "#0a1f62"
-    tsa-purple = "#9c164b"
-    tsa-royal-blue = "#0a3786"
-    tsa-scarlet = "#dc2c15"
-    tsa-scout-green = "#39774e"
-    tsa-scout-purple = "#55377d"
-    tsa-sky-blue = "#b2d0ea"
-    tsa-turquoise = "#02a2a8"
-    tsa-white = "#ffffff"
-    sn-amethyst-falls = "#161f30"
-    sn-azure-blue = "#286bb4"
-    sn-black = "#191e1c"
-    sn-bright-orange = "#ef6200"
-    sn-brown = "#6a4720"
-    sn-dark-red = "#b10d2b"
-    sn-deep-orange = "#da3428"
-    sn-emerald = "#019835"
-    sn-gold = "#ddb254"
-    sn-green = "#65b930"
-    sn-grey = "#beb9b6"
-    sn-high-viz-grey = "#94989b"
-    sn-hot-pink = "#e00075"
-    sn-kelly-green = "#019835"
-    sn-khaki = "#c1a281"
-    sn-lavender = "#ac8fc1"
-    sn-lemon = "#ffd001"
-    sn-light-blue = "#89a6d5"
-    sn-lime-green = "#85bd36"
-    sn-maroon = "#71223b"
-    sn-navy-blue = "#3a319c"
-    sn-orange = "#e5641c"
-    sn-pastel-green = "#a4daa3"
-    sn-princess-pink = "#ff9acc"
-    sn-purple = "#942e65"
-    sn-reflective-orange = "#f98100"
-    sn-reflective-yellow = "#e7ed0b"
-    sn-royal-blue = "#23336a"
-    sn-scarlet = "#e4212a"
-    sn-scout-green = "#2a472b"
-    sn-scout-purple = "#640186"
-    sn-sky-blue = "#9eebff"
-    sn-turquoise = "#119dbf"
-    sn-white = "#ffffff"
-    sn-yellow = "#fceb1f"
-    1ss-purple = "#4d3777"
-    1ss-lime = "#8dc85b"
-    1ss-mango = "#f8a856"
-    1ss-marine-blue = "#1f2b61"
-    1ss-maroon = "#5a1a3b"
-    1ss-navy-blue = "#0f193a"
-    1ss-orange = "#f47720"
-    1ss-pine-green = "#0b3d25"
-    1ss-pink = "#f05b9b"
-    1ss-primrose = "#fbb83e"
-    1ss-lemon = "#f1ce1b"
-    1ss-royal-blue = "#22275e"
-    1ss-scarlet = "#c72026"
-    1ss-scout-green = "#17363a"
-    1ss-sky-blue = "#a4d2ea"
-    1ss-tangerine = "#ed3322"
-    1ss-turquoise = "#138bae"
-    1ss-violet = "#4e3e7d"
-    1ss-white = "#fefefe"
-    1ss-cornflower = "#8ca9d8"
-    1ss-amethyst = "#2e2b71"
-    1ss-baby-pink = "#f9becc"
-    1ss-banana = "#f9e00f"
-    1ss-black = "#15151e"
-    1ss-bright-yellow = "#f8ef47"
-    1ss-brown = "#4f2d22"
-    1ss-charcoal = "#535f77"
-    1ss-chocolate = "#39282b"
-    1ss-amber = "#f8ce2e"
-    1ss-dark-red = "#521825"
-    1ss-emerald = "#136c3a"
-    1ss-fuchsia = "#a41f4e"
-    1ss-gold = "#ee9727"
-    1ss-grape = "#6a1e4e"
-    1ss-grey = "#adaba9"
-    1ss-hyacinth = "#406da4"
-    1ss-khaki = "#cab195"
-    mbc-bright-yellow = "#efe406"
-    mbc-lemon = "#f3e747"
-    mbc-orange = "#c98200"
-    mbc-scarlet = "#b92f1f"
-    mbc-dark-red = "#71132a"
-    mbc-maroon = "#480d2c"
-    mbc-purple = "#5c068c"
-    mbc-gold = "#c98f47"
-    mbc-khaki = "#826e57"
-    mbc-chocolate = "#422310"
-    mbc-grape = "#7b0065"
-    mbc-emerald = "#1a6a30"
-    mbc-pine-green = "#184f3f"
-    mbc-scout-green = "#143422"
-    mbc-sky = "#afc3d5"
-    mbc-royal-blue = "#21145c"
-    mbc-navy-blue = "#152442"
-    mbc-white = "#f9f9f9"
-    mbc-grey = "#7e7f84"
-    mbc-black = "#000000"
-    mbc-pink = "#cd6888"
-    mbc-brownsea-blue = "#b9cfe4"
-    mbc-centenary-pink = "#9e447b"
-    mbc-centenary-gold = "#e4b71b"
-    mbc-centenary-blue = "#4484b5"
-    mbc-turqoise = "#44bce3"
-    mbc-tangerine = "#ff5e00"
-    mbc-hyacinth = "#c2bcec"
-    mbc-day-glo-yellow = "#e6ff15"
-    mbc-day-glo-orange = "#ff8418"
-    mbc-day-glo-green = "#8dff32"
-    mbc-day-glo-pink = "#ff51b5"
-    mbc-reflective = "#e1e8e8"
-    mbc-cambridge-blue = "#96E6C2"
-    mbc-buttermilk = "#ffeb9c"
-    war-amber = "#fdae35"
-    war-black = "#000000"
-    war-brown = "#fdae35"
-    war-cerise = "#d91b4b"
-    war-crimson = "#4f0003"
-    war-emerald = "#01613a"
-    war-french-navy = "#022658"
-    war-gold = "#e0b028"
-    war-grey = "#1f3144"
-    war-hyacinth = "#022b69"
-    war-lemon = "#ecc101"
-    war-lime = "#6edb5a"
-    war-maroon = "#570313"
-    war-navy = "#010512"
-    war-orange = "#d29042"
-    war-pink = "#e5a7ac"
-    war-primrose = "#e0cb3a"
-    war-purple = "#1a0044"
-    war-royal = "#031a58"
-    war-scarlet = "#af0002"
-    war-scout-green = "#003120"
-    war-silver-grey = "#72716c"
-    war-sky = "#6787ae"
-    war-sky-s-a = "#9abecc"
-    war-tangerine = "#ed5202"
-    war-turquoise = "#0078af"
-    war-white = "#eff2f7"
-    war-yellow = "#e7ce3e"
+    [params.colours.tsa-black]
+      hex = "#221f20"
+      basic = ["black"]
+    [params.colours.tsa-bright-orange]
+      hex = "#f9a930"
+      basic = ["orange"]
+    [params.colours.tsa-brown]
+      hex = "#9b7747"
+      basic = ["brown"]
+    [params.colours.tsa-dark-red]
+      hex = "#94362a"
+      basic = ["red"]
+    [params.colours.tsa-emerald]
+      hex = "#42ab66"
+      basic = ["green"]
+    [params.colours.tsa-gold]
+      hex = "#ffdb7c"
+      basic = ["yellow", "gold"]
+    [params.colours.tsa-green]
+      hex = "#188951"
+      basic = ["green"]
+    [params.colours.tsa-grey]
+      hex = "#86858b"
+      basic = ["grey", "silver"]
+    [params.colours.tsa-khaki]
+      hex = "#d5ba8f"
+      basic = ["brown"]
+    [params.colours.tsa-lemon]
+      hex = "#fdfe63"
+      basic = ["yellow"]
+    [params.colours.tsa-maroon]
+      hex = "#7c3f47"
+      basic = ["red"]
+    [params.colours.tsa-navy-blue]
+      hex = "#0a1f62"
+      basic = ["blue"]
+    [params.colours.tsa-purple]
+      hex = "#9c164b"
+      basic = ["purple"]
+    [params.colours.tsa-royal-blue]
+      hex = "#0a3786"
+      basic = ["blue"]
+    [params.colours.tsa-scarlet]
+      hex = "#dc2c15"
+      basic = ["red"]
+    [params.colours.tsa-scout-green]
+      hex = "#39774e"
+      basic = ["green"]
+    [params.colours.tsa-scout-purple]
+      hex = "#55377d"
+      basic = ["purple"]
+    [params.colours.tsa-sky-blue]
+      hex = "#b2d0ea"
+      basic = ["blue"]
+    [params.colours.tsa-turquoise]
+      hex = "#02a2a8"
+      basic = ["blue", "green"]
+    [params.colours.tsa-white]
+      hex = "#ffffff"
+      basic = ["white"]
+    [params.colours.sn-amethyst-falls]
+      hex = "#161f30"
+      basic = ["blue"]
+    [params.colours.sn-azure-blue]
+      hex = "#286bb4"
+      basic = ["blue"]
+    [params.colours.sn-black]
+      hex = "#191e1c"
+      basic = ["black"]
+    [params.colours.sn-bright-orange]
+      hex = "#ef6200"
+      basic = ["orange"]
+    [params.colours.sn-brown]
+      hex = "#6a4720"
+      basic = ["brown"]
+    [params.colours.sn-dark-red]
+      hex = "#b10d2b"
+      basic = ["red"]
+    [params.colours.sn-deep-orange]
+      hex = "#da3428"
+      basic = ["orange"]
+    [params.colours.sn-emerald]
+      hex = "#019835"
+      basic = ["green"]
+    [params.colours.sn-gold]
+      hex = "#ddb254"
+      basic = ["yellow", "gold"]
+    [params.colours.sn-green]
+      hex = "#65b930"
+      basic = ["green"]
+    [params.colours.sn-grey]
+      hex = "#beb9b6"
+      basic = ["grey", "silver"]
+    [params.colours.sn-high-viz-grey]
+      hex = "#94989b"
+      basic = ["grey", "silver"]
+    [params.colours.sn-hot-pink]
+      hex = "#e00075"
+      basic = ["pink"]
+    [params.colours.sn-kelly-green]
+      hex = "#019835"
+      basic = ["green"]
+    [params.colours.sn-khaki]
+      hex = "#c1a281"
+      basic = ["brown"]
+    [params.colours.sn-lavender]
+      hex = "#ac8fc1"
+      basic = ["purple"]
+    [params.colours.sn-lemon]
+      hex = "#ffd001"
+      basic = ["yellow"]
+    [params.colours.sn-light-blue]
+      hex = "#89a6d5"
+      basic = ["blue"]
+    [params.colours.sn-lime-green]
+      hex = "#85bd36"
+      basic = ["green"]
+    [params.colours.sn-maroon]
+      hex = "#71223b"
+      basic = ["red"]
+    [params.colours.sn-navy-blue]
+      hex = "#3a319c"
+      basic = ["blue"]
+    [params.colours.sn-orange]
+      hex = "#e5641c"
+      basic = ["orange"]
+    [params.colours.sn-pastel-green]
+      hex = "#a4daa3"
+      basic = ["green"]
+    [params.colours.sn-princess-pink]
+      hex = "#ff9acc"
+      basic = ["pink"]
+    [params.colours.sn-purple]
+      hex = "#942e65"
+      basic = ["purple"]
+    [params.colours.sn-reflective-orange]
+      hex = "#f98100"
+      basic = ["orange"]
+    [params.colours.sn-reflective-yellow]
+      hex = "#e7ed0b"
+      basic = ["yellow"]
+    [params.colours.sn-royal-blue]
+      hex = "#23336a"
+      basic = ["blue"]
+    [params.colours.sn-scarlet]
+      hex = "#e4212a"
+      basic = ["red"]
+    [params.colours.sn-scout-green]
+      hex = "#2a472b"
+      basic = ["green"]
+    [params.colours.sn-scout-purple]
+      hex = "#640186"
+      basic = ["purple"]
+    [params.colours.sn-sky-blue]
+      hex = "#9eebff"
+      basic = ["blue"]
+    [params.colours.sn-turquoise]
+      hex = "#119dbf"
+      basic = ["blue", "green"]
+    [params.colours.sn-white]
+      hex = "#ffffff"
+      basic = ["white"]
+    [params.colours.sn-yellow]
+      hex = "#fceb1f"
+      basic = ["yellow"]
+    [params.colours.1ss-purple]
+      hex = "#4d3777"
+      basic = ["purple"]
+    [params.colours.1ss-lime]
+      hex = "#8dc85b"
+      basic = ["green"]
+    [params.colours.1ss-mango]
+      hex = "#f8a856"
+      basic = ["orange"]
+    [params.colours.1ss-marine-blue]
+      hex = "#1f2b61"
+      basic = ["blue"]
+    [params.colours.1ss-maroon]
+      hex = "#5a1a3b"
+      basic = ["red"]
+    [params.colours.1ss-navy-blue]
+      hex = "#0f193a"
+      basic = ["blue"]
+    [params.colours.1ss-orange]
+      hex = "#f47720"
+      basic = ["orange"]
+    [params.colours.1ss-pine-green]
+      hex = "#0b3d25"
+      basic = ["green"]
+    [params.colours.1ss-pink]
+      hex = "#f05b9b"
+      basic = ["pink"]
+    [params.colours.1ss-primrose]
+      hex = "#fbb83e"
+      basic = ["yellow"]
+    [params.colours.1ss-lemon]
+      hex = "#f1ce1b"
+      basic = ["yellow"]
+    [params.colours.1ss-royal-blue]
+      hex = "#22275e"
+      basic = ["blue"]
+    [params.colours.1ss-scarlet]
+      hex = "#c72026"
+      basic = ["red"]
+    [params.colours.1ss-scout-green]
+      hex = "#17363a"
+      basic = ["green"]
+    [params.colours.1ss-sky-blue]
+      hex = "#a4d2ea"
+      basic = ["blue"]
+    [params.colours.1ss-tangerine]
+      hex = "#ed3322"
+      basic = ["orange", "red"]
+    [params.colours.1ss-turquoise]
+      hex = "#138bae"
+      basic = ["blue", "green"]
+    [params.colours.1ss-violet]
+      hex = "#4e3e7d"
+      basic = ["purple"]
+    [params.colours.1ss-white]
+      hex = "#fefefe"
+      basic = ["white"]
+    [params.colours.1ss-cornflower]
+      hex = "#8ca9d8"
+      basic = ["blue"]
+    [params.colours.1ss-amethyst]
+      hex = "#2e2b71"
+      basic = ["blue"]
+    [params.colours.1ss-baby-pink]
+      hex = "#f9becc"
+      basic = ["pink"]
+    [params.colours.1ss-banana]
+      hex = "#f9e00f"
+      basic = ["yellow"]
+    [params.colours.1ss-black]
+      hex = "#15151e"
+      basic = ["black"]
+    [params.colours.1ss-bright-yellow]
+      hex = "#f8ef47"
+      basic = ["yellow"]
+    [params.colours.1ss-brown]
+      hex = "#4f2d22"
+      basic = ["brown"]
+    [params.colours.1ss-charcoal]
+      hex = "#535f77"
+      basic = ["grey"]
+    [params.colours.1ss-chocolate]
+      hex = "#39282b"
+      basic = ["brown"]
+    [params.colours.1ss-amber]
+      hex = "#f8ce2e"
+      basic = ["yellow"]
+    [params.colours.1ss-dark-red]
+      hex = "#521825"
+      basic = ["red"]
+    [params.colours.1ss-emerald]
+      hex = "#136c3a"
+      basic = ["green"]
+    [params.colours.1ss-fuchsia]
+      hex = "#a41f4e"
+      basic = ["red", "purple"]
+    [params.colours.1ss-gold]
+      hex = "#ee9727"
+      basic = ["yellow", "gold"]
+    [params.colours.1ss-grape]
+      hex = "#6a1e4e"
+      basic = ["purple"]
+    [params.colours.1ss-grey]
+      hex = "#adaba9"
+      basic = ["grey", "silver"]
+    [params.colours.1ss-hyacinth]
+      hex = "#406da4"
+      basic = ["blue"]
+    [params.colours.1ss-khaki]
+      hex = "#cab195"
+      basic = ["brown"]
+    [params.colours.mbc-bright-yellow]
+      hex = "#efe406"
+      basic = ["yellow"]
+    [params.colours.mbc-lemon]
+      hex = "#f3e747"
+      basic = ["yellow"]
+    [params.colours.mbc-orange]
+      hex = "#c98200"
+      basic = ["orange"]
+    [params.colours.mbc-scarlet]
+      hex = "#b92f1f"
+      basic = ["red"]
+    [params.colours.mbc-dark-red]
+      hex = "#71132a"
+      basic = ["red"]
+    [params.colours.mbc-maroon]
+      hex = "#480d2c"
+      basic = ["red"]
+    [params.colours.mbc-purple]
+      hex = "#5c068c"
+      basic = ["purple"]
+    [params.colours.mbc-gold]
+      hex = "#c98f47"
+      basic = ["yellow", "gold"]
+    [params.colours.mbc-khaki]
+      hex = "#826e57"
+      basic = ["brown"]
+    [params.colours.mbc-chocolate]
+      hex = "#422310"
+      basic = ["brown"]
+    [params.colours.mbc-grape]
+      hex = "#7b0065"
+      basic = ["purple"]
+    [params.colours.mbc-emerald]
+      hex = "#1a6a30"
+      basic = ["green"]
+    [params.colours.mbc-pine-green]
+      hex = "#184f3f"
+      basic = ["green"]
+    [params.colours.mbc-scout-green]
+      hex = "#143422"
+      basic = ["green"]
+    [params.colours.mbc-sky]
+      hex = "#afc3d5"
+      basic = ["blue"]
+    [params.colours.mbc-royal-blue]
+      hex = "#21145c"
+      basic = ["blue"]
+    [params.colours.mbc-navy-blue]
+      hex = "#152442"
+      basic = ["blue"]
+    [params.colours.mbc-white]
+      hex = "#f9f9f9"
+      basic = ["white"]
+    [params.colours.mbc-grey]
+      hex = "#7e7f84"
+      basic = ["grey", "silver"]
+    [params.colours.mbc-black]
+      hex = "#000000"
+      basic = ["black"]
+    [params.colours.mbc-pink]
+      hex = "#cd6888"
+      basic = ["pink"]
+    [params.colours.mbc-brownsea-blue]
+      hex = "#b9cfe4"
+      basic = ["blue"]
+    [params.colours.mbc-centenary-pink]
+      hex = "#9e447b"
+      basic = ["pink"]
+    [params.colours.mbc-centenary-gold]
+      hex = "#e4b71b"
+      basic = ["yellow", "gold"]
+    [params.colours.mbc-centenary-blue]
+      hex = "#4484b5"
+      basic = ["blue"]
+    [params.colours.mbc-turqoise]
+      hex = "#44bce3"
+      basic = ["blue", "green"]
+    [params.colours.mbc-tangerine]
+      hex = "#ff5e00"
+      basic = ["orange"]
+    [params.colours.mbc-hyacinth]
+      hex = "#c2bcec"
+      basic = ["blue", "purple"]
+    [params.colours.mbc-day-glo-yellow]
+      hex = "#e6ff15"
+      basic = ["yellow"]
+    [params.colours.mbc-day-glo-orange]
+      hex = "#ff8418"
+      basic = ["orange"]
+    [params.colours.mbc-day-glo-green]
+      hex = "#8dff32"
+      basic = ["green"]
+    [params.colours.mbc-day-glo-pink]
+      hex = "#ff51b5"
+      basic = ["pink"]
+    [params.colours.mbc-reflective]
+      hex = "#e1e8e8"
+      basic = ["grey", "white"]
+    [params.colours.mbc-cambridge-blue]
+      hex = "#96E6C2"
+      basic = ["blue", "green"]
+    [params.colours.mbc-buttermilk]
+      hex = "#ffeb9c"
+      basic = ["yellow"]
+    [params.colours.war-amber]
+      hex = "#fdae35"
+      basic = ["amber"]
+    [params.colours.war-black]
+      hex = "#000000"
+      basic = ["black"]
+    [params.colours.war-brown]
+      hex = "#fdae35"
+      basic = ["brown"]
+    [params.colours.war-cerise]
+      hex = "#d91b4b"
+      basic = ["red"]
+    [params.colours.war-crimson]
+      hex = "#4f0003"
+      basic = ["red", "brown"]
+    [params.colours.war-emerald]
+      hex = "#01613a"
+      basic = ["green"]
+    [params.colours.war-french-navy]
+      hex = "#022658"
+      basic = ["blue"]
+    [params.colours.war-gold]
+      hex = "#e0b028"
+      basic = ["yellow", "gold"]
+    [params.colours.war-grey]
+      hex = "#1f3144"
+      basic = ["grey"]
+    [params.colours.war-hyacinth]
+      hex = "#022b69"
+      basic = ["blue"]
+    [params.colours.war-lemon]
+      hex = "#ecc101"
+      basic = ["yellow"]
+    [params.colours.war-lime]
+      hex = "#6edb5a"
+      basic = ["green"]
+    [params.colours.war-maroon]
+      hex = "#570313"
+      basic = ["red"]
+    [params.colours.war-navy]
+      hex = "#010512"
+      basic = ["blue"]
+    [params.colours.war-orange]
+      hex = "#d29042"
+      basic = ["orange"]
+    [params.colours.war-pink]
+      hex = "#e5a7ac"
+      basic = ["pink"]
+    [params.colours.war-primrose]
+      hex = "#e0cb3a"
+      basic = ["yellow"]
+    [params.colours.war-purple]
+      hex = "#1a0044"
+      basic = ["purple"]
+    [params.colours.war-royal]
+      hex = "#031a58"
+      basic = ["blue"]
+    [params.colours.war-scarlet]
+      hex = "#af0002"
+      basic = ["red"]
+    [params.colours.war-scout-green]
+      hex = "#003120"
+      basic = ["green"]
+    [params.colours.war-silver-grey]
+      hex = "#72716c"
+      basic = ["grey", "silver"]
+    [params.colours.war-sky]
+      hex = "#6787ae"
+      basic = ["blue"]
+    [params.colours.war-sky-s-a]
+      hex = "#9abecc"
+      basic = ["blue"]
+    [params.colours.war-tangerine]
+      hex = "#ed5202"
+      basic = ["orange"]
+    [params.colours.war-turquoise]
+      hex = "#0078af"
+      basic = ["blue"]
+    [params.colours.war-white]
+      hex = "#eff2f7"
+      basic = ["white"]
+    [params.colours.war-yellow]
+      hex = "#e7ce3e"
+      basic = ["yellow"]
