@@ -2,6 +2,16 @@ baseURL = "https://neckerdb.co.uk/"
 
 disableKinds = ["taxonomy", "term"]
 
+[outputs]
+  home = ['html']
+  page = ['html', 'js']
+  section = ['html', 'js']
+
+[outputFormats]
+  [outputFormats.js]
+    mediaType = 'text/javascript'
+    permalinkable = false
+
 [module]
   [module.hugoVersion]
     extended = false

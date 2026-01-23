@@ -5,11 +5,19 @@ const searchString = searchParams.get("q");
 document.getElementById("searchTitle").textContent = searchString;
 
 const results = idx.search(searchString);
+console.dir(results);
 
 const resultsDiv = document.getElementById('searchResults');
 
 for (let i = 0; i < results.length; i++) {
-	resultsDiv.appendChild(htmlToNode('<p><a href="' + results[i].ref + '">' + results[i].ref + '</a></p>'));
+	let moduleURL = results[i].ref
+	if (moduleURL.slice(-1) != "/") {
+		moduleURL = results[i].ref + "/"
+	}
+	moduleURL += "index.js"
+	import(moduleURL).then((module) => {
+		resultsDiv.appendChild(htmlToNode(module.html));
+	});
 }
 
 

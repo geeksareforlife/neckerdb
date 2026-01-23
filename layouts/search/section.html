@@ -4,7 +4,7 @@
     {{ .Content }}
 	</article>
 
-	<p class="mb-5">PUT A SEARCH BAR HERE</p>
+	<p class="mb-5">PUT A SEARCH BAR HERE??</p>
 
 	<p class="mb-3 text-xl">Results for: <span id="searchTitle" class="font-bold"></span></p>
 	<div id="searchResults" class="grid gap-3 mb-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6">
@@ -17,5 +17,5 @@
     {{- $index := resources.Get "js/lunr/pages_index.js" -}}
     <script src="{{ $index.RelPermalink }}"></script>
     {{- $search := resources.Get "js/search.js" -}}
-    <script src="{{ $search.RelPermalink }}" defer></script>
+    <script type="module" src="{{ $search.RelPermalink }}" defer></script>
 {{ end }}

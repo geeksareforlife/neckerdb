@@ -15,6 +15,7 @@ module.exports = function(grunt) {
 
 		var indexPages = function() {
             var pagesIndex = [];
+            grunt.log.debug("entering indexPages");
 
             grunt.file.recurse(CONTENT_PATH_PREFIX, function(abspath, rootdir, subdir, filename) {
             	// we only want to index actual neckers.
@@ -22,7 +23,7 @@ module.exports = function(grunt) {
             	if (typeof subdir == "undefined") {
             		// skip
             	} else {
-            		ignoreDirs = ['about', 'neckers', 'submit', 'todo', 'unknown'];
+            		ignoreDirs = ['about', 'neckers', 'submit', 'search', 'todo', 'unknown'];
 
             		thisDir = "";
 
