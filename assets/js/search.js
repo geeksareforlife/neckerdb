@@ -7,16 +7,42 @@ document.getElementById("searchTitle").textContent = searchString;
 const results = idx.search(searchString);
 console.dir(results);
 
+const numPages = Math.ceil(results.length / 24);
+let currentPage = searchParams.get("p");
+if (currentPage === null) {
+	currentPage = 1;
+} else {
+	currentPage	= parseInt(currentPage);
+	if (Number.isNaN(currentPage)) {
+		currentPage = 1
+	}
+	if (currentPage > numPages) {
+		currentPage = numPages;
+	}
+}
+
+let pageStart = 0 + ((currentPage - 1) * 24);
+let pageEnd = 24 + ((currentPage - 1) * 24);
+if (pageEnd > results.length) {
+	pageEnd = results.length;
+}
+console.log(pageStart + " - " + pageEnd);
+
 const resultsDiv = document.getElementById('searchResults');
 
-for (let i = 0; i < results.length; i++) {
+let nodes = [];
+
+for (let i = pageStart; i < pageEnd; i++) {
 	let moduleURL = results[i].ref
 	if (moduleURL.slice(-1) != "/") {
 		moduleURL = results[i].ref + "/"
 	}
 	moduleURL += "index.js"
+
+	nodes[i] = resultsDiv.appendChild(htmlToNode("<a></a>"));
 	import(moduleURL).then((module) => {
-		resultsDiv.appendChild(htmlToNode(module.html));
+		console.log(i);
+		resultsDiv.replaceChild(htmlToNode(module.html), nodes[i]);
 	});
 }
 
