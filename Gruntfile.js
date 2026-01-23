@@ -79,9 +79,17 @@ module.exports = function(grunt) {
                 href = S(abspath).chompLeft(CONTENT_PATH_PREFIX).chompRight(filename).s;
             }
 
+            matches = frontMatter.title.match(/\d+/);
+            if (matches) {
+            	groupNumber = matches[0];
+            } else {
+            	groupNumber = "";
+            }
+
         	pageIndex =  {
         		href: href,
         		title: frontMatter.title,
+        		number: groupNumber,
         		colours: processColours(frontMatter)
         	};
 
@@ -141,6 +149,7 @@ module.exports = function(grunt) {
         idx = lunr(function() {
         	this.ref('href');
         	this.field('title');
+        	this.field('number');
         	this.field('colours');
 
         	indexPages().forEach(function (doc) {
@@ -148,7 +157,7 @@ module.exports = function(grunt) {
         	}, this);
         });
 
-        grunt.file.write("assets/js/lunr/PagesIndex.js", "var idx = lunr.Index.load(JSON.parse(" + JSON.stringify(idx) + "));");
+        grunt.file.write("assets/js/lunr/pages_index.js", "var idx = lunr.Index.load(JSON.parse(`" + JSON.stringify(idx) + "`));");
         grunt.log.ok("Index built");
 	});
 };

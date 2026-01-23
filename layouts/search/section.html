@@ -1,0 +1,17 @@
+{{ define "main" }}
+	<article class="prose prose-lg lg:prose-sm mb-6">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+	</article>
+
+	<div id="searchResults" class="grid gap-3 mb-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6">
+
+	</div>
+{{ end }}
+
+{{ define "head" }}
+	{{/* Search Index */}}
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    {{- $search := resources.Get "js/lunr/pages_index.js" -}}
+    <script src="{{ $search.RelPermalink }}"></script>
+{{ end }}
