@@ -5,4 +5,4 @@ export const html = `<a class="flex flex-col bg-gray-100 overflow-hidden rounded
           </div>
           <div class="pt-2 px-2 mb-auto text-center text-xl lg:text-base">{{ .Title }}</div>
         </div>
-      </a>`
+      </a>`;
