@@ -8,6 +8,10 @@ params:
   showNecker: single
   outerBorder: tsa-scarlet
   main: tsa-scout-green
+  showbadge: true
+  badgeFile: twomileash.png
+  badgeWidth: 10
+  badgeBottom: 20
   info:
     - {type: location, data: unknown, order: 2}
 ---
