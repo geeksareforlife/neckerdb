@@ -18,14 +18,23 @@
               </div>
             </div>
           </div>
-          <!--<div class="flex flex-1 justify-center px-2 lg:ml-6 lg:justify-end">
-            <div class="grid w-full max-w-lg grid-cols-1 lg:max-w-xs">
-              <input type="search" name="search" placeholder="Search" aria-label="Search" class="col-start-1 row-start-1 block w-full rounded-md bg-gray-700 py-1.5 pr-3 pl-10 text-base text-white outline-hidden placeholder:text-gray-400 focus:bg-white focus:text-gray-900 focus:placeholder:text-gray-400 sm:text-sm/6" />
-              <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="pointer-events-none col-start-1 row-start-1 ml-3 size-5 self-center text-gray-400">
+
+
+
+
+          <div class="flex flex-1 mx-6 lg:ml-6 justify-end">
+            <form action="/search" method="GET" id="searchform" class="group grid w-full max-w-lg grid-cols-1 lg:max-w-xs">
+              <input type="search" name="q" placeholder="Group name or colour" aria-label="Search" class="col-start-1 row-start-1 block w-full rounded-l-md bg-gray-500 py-3 md:py-1.5 pr-1 pl-10 text-xl md:text-lg lg:text-sm text-white outline-hidden placeholder:text-gray-100 focus:bg-white focus:text-gray-900 focus:placeholder:text-gray-400" />
+              <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="pointer-events-none col-start-1 row-start-1 ml-3 size-5 self-center text-gray-100 group-has-[:focus]:text-gray-900">
                 <path d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd" fill-rule="evenodd" />
               </svg>
-            </div>
-          </div>-->
+            </form>
+            <button form="searchform" class="flex shrink-0 items-center gap-x-1.5 rounded-r-md bg-sky-600 px-3 py-2 text-lg md:text-sm lg:text-xs font-semibold text-gray-100 outline outline-1 -outline-offset-1 outline-sky-600 hover:bg-gray-100 hover:text-sky-600">
+              Search
+            </button>
+          </div>
+
+
           <div class="flex lg:hidden">
             <!-- Mobile menu button -->
             <button type="button" @click="toggle()" aria-controls="mobile-menu" aria-expanded="false" class="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
@@ -56,6 +65,7 @@
       <div id="mobile-menu" class="lg:hidden bg-gray-800" x-show="open">
         <div class="space-y-1 px-2 pt-2 pb-3">
           {{- $context := dict "page" . "location" "mobile" -}}
+          
           {{- partial "topnav-links.html" $context -}}
         </div>
       </div>

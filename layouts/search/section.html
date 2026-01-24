@@ -1,0 +1,16 @@
+{{ define "main" }}
+	<p class="mb-3 text-2xl font-bold">Results for: <span id="searchTitle" class="font-normal text-sky-600"></span></p>
+	<div id="searchResults" class="grid gap-3 mb-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6">
+
+	</div>
+
+	<nav id="pagination"></nav>
+{{ end }}
+
+{{ define "head" }}
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    {{- $index := resources.Get "js/lunr/pages_index.js" -}}
+    <script src="{{ $index.RelPermalink }}"></script>
+    {{- $search := resources.Get "js/search.js" -}}
+    <script type="module" src="{{ $search.RelPermalink }}" defer></script>
+{{ end }}

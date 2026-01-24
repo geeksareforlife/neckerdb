@@ -4,7 +4,7 @@
 
     {{- $currentSource := "" -}}
 
-    {{- range $name, $colour := .Site.Params.colours -}}
+    {{- range $name, $colourDetails := .Site.Params.colours -}}
       {{- $matches := findRESubmatch `(^.+?)\-(.*)$` $name -}}
       {{- $source := index (index $matches 0) 1 -}}
       {{- $colourName := index (index $matches 0) 2 -}}
@@ -17,6 +17,8 @@
         <h2>{{ index site.Params.sources $currentSource }}</h2>
         <div class="grid grid-cols-6 gap-4 not-prose">
       {{- end -}}
+
+      {{- $colour := $colourDetails.hex -}}
 
       {{- $r := int (printf "0x%s" (substr $colour 1 2)) -}}
       {{- $g := int (printf "0x%s" (substr $colour 3 2)) -}}
